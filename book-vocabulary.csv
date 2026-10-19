@@ -1,0 +1,2807 @@
+unit,unit_title,word_or_phrase
+1,Learning vocabulary,accept
+1,Learning vocabulary,active
+1,Learning vocabulary,advice
+1,Learning vocabulary,aloud
+1,Learning vocabulary,argue
+1,Learning vocabulary,argument
+1,Learning vocabulary,at least
+1,Learning vocabulary,choice
+1,Learning vocabulary,clean
+1,Learning vocabulary,communicate
+1,Learning vocabulary,daily
+1,Learning vocabulary,dead
+1,Learning vocabulary,different
+1,Learning vocabulary,dirty
+1,Learning vocabulary,entrance
+1,Learning vocabulary,expand
+1,Learning vocabulary,filthy
+1,Learning vocabulary,highlighter pen
+1,Learning vocabulary,kind
+1,Learning vocabulary,opposite
+1,Learning vocabulary,permanent
+1,Learning vocabulary,revise
+1,Learning vocabulary,routine
+1,Learning vocabulary,rub sth out
+1,Learning vocabulary,rubber
+1,Learning vocabulary,silently
+1,Learning vocabulary,smooth
+1,Learning vocabulary,synonym
+1,Learning vocabulary,weekly
+2,Keeping a vocabulary notebook,awful
+2,Keeping a vocabulary notebook,date
+2,Keeping a vocabulary notebook,draw (pictures)
+2,Keeping a vocabulary notebook,dreadful
+2,Keeping a vocabulary notebook,enjoy (+ -ing)
+2,Keeping a vocabulary notebook,explanation
+2,Keeping a vocabulary notebook,forget
+2,Keeping a vocabulary notebook,kitten
+2,Keeping a vocabulary notebook,mess
+2,Keeping a vocabulary notebook,mix sth up
+2,Keeping a vocabulary notebook,necessary
+2,Keeping a vocabulary notebook,note down
+2,Keeping a vocabulary notebook,raw
+2,Keeping a vocabulary notebook,tip
+2,Keeping a vocabulary notebook,topic
+2,Keeping a vocabulary notebook,translate (sth into sth)
+2,Keeping a vocabulary notebook,translation
+2,Keeping a vocabulary notebook,unnecessary
+2,Keeping a vocabulary notebook,untidy
+2,Keeping a vocabulary notebook,write down
+3,Using a dictionary,amount
+3,Using a dictionary,behave
+3,Using a dictionary,bilingual
+3,Using a dictionary,certificate
+3,Using a dictionary,connected to/with
+3,Using a dictionary,cup
+3,Using a dictionary,definition
+3,Using a dictionary,emphasise
+3,Using a dictionary,guess
+3,Using a dictionary,official
+3,Using a dictionary,part of speech
+3,Using a dictionary,phonemic symbol
+3,Using a dictionary,phrase
+3,Using a dictionary,relating to
+3,Using a dictionary,see
+3,Using a dictionary,tick
+4,English language words,adjective
+4,English language words,adverb
+4,English language words,capital letter
+4,English language words,comma
+4,English language words,conjunction
+4,English language words,countable (noun)
+4,English language words,definite article
+4,English language words,full stop
+4,English language words,indefinite article
+4,English language words,irregular (verb)
+4,English language words,link word
+4,English language words,noun
+4,English language words,pause
+4,English language words,phonemic symbol
+4,English language words,phrasal verb
+4,English language words,phrase
+4,English language words,question mark
+4,English language words,regular (verb)
+4,English language words,stress
+4,English language words,suffix
+4,English language words,syllable
+4,English language words,uncountable(noun)
+4,English language words,verb
+5,"Country, nationality and language",Africa
+5,"Country, nationality and language",American
+5,"Country, nationality and language",Arabic
+5,"Country, nationality and language",Argentina
+5,"Country, nationality and language",Argentinian
+5,"Country, nationality and language",Asia
+5,"Country, nationality and language",Australia
+5,"Country, nationality and language",Australian
+5,"Country, nationality and language",Brazil
+5,"Country, nationality and language",Brazilian
+5,"Country, nationality and language",British
+5,"Country, nationality and language",Cantonese
+5,"Country, nationality and language",capital
+5,"Country, nationality and language",Caribbean
+5,"Country, nationality and language",China
+5,"Country, nationality and language",Chinese
+5,"Country, nationality and language",come from
+5,"Country, nationality and language",continent
+5,"Country, nationality and language",Egypt
+5,"Country, nationality and language",Egyptian
+5,"Country, nationality and language",English
+5,"Country, nationality and language",Europe
+5,"Country, nationality and language",Far East
+5,"Country, nationality and language",first language
+5,"Country, nationality and language",France
+5,"Country, nationality and language",French
+5,"Country, nationality and language",German
+5,"Country, nationality and language",Germany
+5,"Country, nationality and language",Greece
+5,"Country, nationality and language",Greek
+5,"Country, nationality and language",Hebrew
+5,"Country, nationality and language",Israel
+5,"Country, nationality and language",Israeli
+5,"Country, nationality and language",Italian
+5,"Country, nationality and language",Italy
+5,"Country, nationality and language",Japan
+5,"Country, nationality and language",Japanese
+5,"Country, nationality and language",Korean
+5,"Country, nationality and language",Mandarin
+5,"Country, nationality and language",Middle East
+5,"Country, nationality and language",Russia
+5,"Country, nationality and language",Russian
+5,"Country, nationality and language",Saudi Arabia
+5,"Country, nationality and language",Saudi Arabian
+5,"Country, nationality and language",Scandinavia
+5,"Country, nationality and language",South America
+5,"Country, nationality and language",South Korea
+5,"Country, nationality and language",Spain
+5,"Country, nationality and language",Spanish
+5,"Country, nationality and language",Swiss
+5,"Country, nationality and language",Switzerland
+5,"Country, nationality and language",Thai
+5,"Country, nationality and language",Thailand
+5,"Country, nationality and language",Turkey
+5,"Country, nationality and language",Turkish
+5,"Country, nationality and language",UK
+5,"Country, nationality and language",United States of America
+5,"Country, nationality and language",USA
+6,The physical world,canal
+6,The physical world,cave
+6,The physical world,climate
+6,The physical world,consist of
+6,The physical world,contrast
+6,The physical world,cover
+6,The physical world,degree(s)
+6,The physical world,distance
+6,The physical world,Earth
+6,The physical world,east
+6,The physical world,in the south
+6,The physical world,in the world
+6,The physical world,landscape
+6,The physical world,minus
+6,The physical world,north
+6,The physical world,north-east
+6,The physical world,north-west
+6,The physical world,ocean
+6,The physical world,on earth
+6,The physical world,over
+6,The physical world,rainforest
+6,The physical world,region
+6,The physical world,south
+6,The physical world,south-east
+6,The physical world,south-west
+6,The physical world,surface
+6,The physical world,temperature
+6,The physical world,waterfall
+6,The physical world,west
+7,Weather,blow (ing)
+7,Weather,boiling
+7,Weather,chilly
+7,Weather,clear (sky)
+7,Weather,cloud
+7,Weather,cloudy
+7,Weather,cold
+7,Weather,come out
+7,Weather,cool
+7,Weather,degree(s)
+7,Weather,extremely
+7,Weather,fog
+7,Weather,foggy
+7,Weather,freezing
+7,Weather,heavy (rain)
+7,Weather,humid
+7,Weather,ice
+7,Weather,icy
+7,Weather,light
+7,Weather,light (rain/shower)
+7,Weather,lightning
+7,Weather,mild
+7,Weather,rain
+7,Weather,shine
+7,Weather,shower
+7,Weather,sky
+7,Weather,snow
+7,Weather,snowing
+7,Weather,snowy
+7,Weather,storm
+7,Weather,strong (wind)
+7,Weather,sun
+7,Weather,sunny
+7,Weather,the cold
+7,Weather,thick fog
+7,Weather,thunder
+7,Weather,thunderstorm
+7,Weather,wet
+7,Weather,wind
+7,Weather,windy
+8,Animals and insects,ant
+8,Animals and insects,bear
+8,Animals and insects,bee
+8,Animals and insects,bull
+8,Animals and insects,butterfly
+8,Animals and insects,cage
+8,Animals and insects,camel
+8,Animals and insects,creature
+8,Animals and insects,dolphin
+8,Animals and insects,donkey
+8,Animals and insects,elephant
+8,Animals and insects,endangered animals
+8,Animals and insects,fly
+8,Animals and insects,frog
+8,Animals and insects,giraffe
+8,Animals and insects,goat
+8,Animals and insects,in the wild
+8,Animals and insects,insect
+8,Animals and insects,keep (pets)
+8,Animals and insects,leopard
+8,Animals and insects,lion
+8,Animals and insects,mice
+8,Animals and insects,monkey
+8,Animals and insects,mosquito
+8,Animals and insects,mouse (animal)
+8,Animals and insects,octopus
+8,Animals and insects,parrot
+8,Animals and insects,pet
+8,Animals and insects,rabbit
+8,Animals and insects,rare
+8,Animals and insects,shark
+8,Animals and insects,snake
+8,Animals and insects,spider
+8,Animals and insects,tiger
+8,Animals and insects,trunk
+8,Animals and insects,whale
+8,Animals and insects,wild (animals)
+8,Animals and insects,wing
+8,Animals and insects,zoo
+9,The body and movement,ankle
+9,The body and movement,blow your nose
+9,The body and movement,bottom
+9,The body and movement,breast
+9,The body and movement,breathe (in/out)
+9,The body and movement,cheek
+9,The body and movement,chest
+9,The body and movement,chin
+9,The body and movement,comb your hair
+9,The body and movement,cry
+9,The body and movement,elbow
+9,The body and movement,fold your arms
+9,The body and movement,forehead
+9,The body and movement,heel
+9,The body and movement,hip
+9,The body and movement,knee
+9,The body and movement,laugh
+9,The body and movement,lips
+9,The body and movement,neck
+9,The body and movement,nod your head
+9,The body and movement,shake hands
+9,The body and movement,shake your head
+9,The body and movement,shoulder
+9,The body and movement,skin
+9,The body and movement,smile
+9,The body and movement,thumb
+9,The body and movement,toe
+9,The body and movement,waist
+9,The body and movement,wave to somebody
+9,The body and movement,wrist
+9,The body and movement,yawn
+10,Describing appearance,-ish
+10,Describing appearance,appearance
+10,Describing appearance,approximately
+10,Describing appearance,athletic
+10,Describing appearance,attractive
+10,Describing appearance,average
+10,Describing appearance,beauty
+10,Describing appearance,black
+10,Describing appearance,blond(e)
+10,Describing appearance,broad
+10,Describing appearance,brown
+10,Describing appearance,curly
+10,Describing appearance,dark (hair)
+10,Describing appearance,dress
+10,Describing appearance,fair
+10,Describing appearance,good-looking
+10,Describing appearance,gorgeous
+10,Describing appearance,hair
+10,Describing appearance,handsome
+10,Describing appearance,height
+10,Describing appearance,longish
+10,Describing appearance,medium height
+10,Describing appearance,narrow
+10,Describing appearance,ordinary
+10,Describing appearance,overweight
+10,Describing appearance,roughly
+10,Describing appearance,smart
+10,Describing appearance,straight
+10,Describing appearance,tallish (person)
+10,Describing appearance,ugly
+10,Describing appearance,wavy
+10,Describing appearance,weigh
+10,Describing appearance,weight
+10,Describing appearance,well
+10,Describing appearance,wide vocabulary
+11,Describing character,anxious
+11,Describing character,calm (person)
+11,Describing character,character
+11,Describing character,clever
+11,Describing character,confident
+11,Describing character,creative
+11,Describing character,dishonest
+11,Describing character,friendly
+11,Describing character,generous
+11,Describing character,hard-working
+11,Describing character,honest
+11,Describing character,impatient
+11,Describing character,intelligent
+11,Describing character,kind
+11,Describing character,lazy
+11,Describing character,mean
+11,Describing character,negative
+11,Describing character,nervous
+11,Describing character,nice
+11,Describing character,patient
+11,Describing character,reliable
+11,Describing character,sense of humour
+11,Describing character,sensible
+11,Describing character,serious
+11,Describing character,shy
+11,Describing character,silly
+11,Describing character,stupid
+11,Describing character,talent
+11,Describing character,talented
+11,Describing character,trust
+11,Describing character,unfriendly
+11,Describing character,unkind
+11,Describing character,unpleasant
+11,Describing character,unreliable
+11,Describing character,What’s he/she/it like?
+11,Describing character,wish
+12,Feelings,anger
+12,Feelings,anxiety
+12,Feelings,anxious
+12,Feelings,caring
+12,Feelings,cheerful
+12,Feelings,confused
+12,Feelings,confusion
+12,Feelings,creative
+12,Feelings,curiosity
+12,Feelings,curious
+12,Feelings,depressed
+12,Feelings,disappointed
+12,Feelings,disappointment
+12,Feelings,effect
+12,Feelings,emotion
+12,Feelings,emotional
+12,Feelings,energetic
+12,Feelings,feelings
+12,Feelings,frightened
+12,Feelings,hopeful
+12,Feelings,jealous
+12,Feelings,jealousy
+12,Feelings,miserable
+12,Feelings,mood
+12,Feelings,scared
+12,Feelings,stress
+12,Feelings,upset
+13,Family and friends,altogether
+13,Family and friends,best friend
+13,Family and friends,close family
+13,Family and friends,cousin
+13,Family and friends,current
+13,Family and friends,elder
+13,Family and friends,ever since
+13,Family and friends,ex-girlfriend/wife (etc.)
+13,Family and friends,friendship
+13,Family and friends,get married to sb
+13,Family and friends,get on (with sb)
+13,Family and friends,get to know sb
+13,Family and friends,mate
+13,Family and friends,mother/brother/son-in-law
+13,Family and friends,nephew
+13,Family and friends,niece
+13,Family and friends,old friend
+13,Family and friends,only child
+13,Family and friends,relations
+13,Family and friends,relatives
+13,Family and friends,remarry
+13,Family and friends,sister-in-law
+13,Family and friends,stepfather
+13,Family and friends,twin(s)
+13,Family and friends,uncle
+13,Family and friends,widow
+14,Growing up,adult
+14,Growing up,alive
+14,Growing up,allow
+14,Growing up,almost
+14,Growing up,approximately
+14,Growing up,at first
+14,Growing up,birth
+14,Growing up,bring sb up
+14,Growing up,childhood
+14,Growing up,dead
+14,Growing up,"early (20s/30s, etc.)"
+14,Growing up,elderly
+14,Growing up,in the end
+14,Growing up,in your teens
+14,Growing up,"late (50s/60s, etc.)"
+14,Growing up,let
+14,Growing up,manage
+14,Growing up,"mid (30s/40s, etc.)"
+14,Growing up,middle-aged
+14,Growing up,nearly
+14,Growing up,retired
+14,Growing up,retirement
+14,Growing up,roughly
+14,Growing up,stay out late
+14,Growing up,strict
+14,Growing up,teenager
+14,Growing up,teens
+14,Growing up,toddler
+15,"Romance, marriage and divorce",(bride) groom
+15,"Romance, marriage and divorce",alone
+15,"Romance, marriage and divorce",anniversary
+15,"Romance, marriage and divorce",break up
+15,"Romance, marriage and divorce",bride
+15,"Romance, marriage and divorce",celebrate
+15,"Romance, marriage and divorce",celebration
+15,"Romance, marriage and divorce",ceremony
+15,"Romance, marriage and divorce",couple
+15,"Romance, marriage and divorce",date
+15,"Romance, marriage and divorce",divorce
+15,"Romance, marriage and divorce",engagement
+15,"Romance, marriage and divorce",get divorced
+15,"Romance, marriage and divorce",get engaged
+15,"Romance, marriage and divorce",get married to sb
+15,"Romance, marriage and divorce",get to know sb
+15,"Romance, marriage and divorce",give up sth
+15,"Romance, marriage and divorce",go out with sb
+15,"Romance, marriage and divorce",go wrong
+15,"Romance, marriage and divorce",honeymoon
+15,"Romance, marriage and divorce",in love
+15,"Romance, marriage and divorce",leave
+15,"Romance, marriage and divorce",marry
+15,"Romance, marriage and divorce",on my/your own
+15,"Romance, marriage and divorce",reception
+15,"Romance, marriage and divorce",relationship
+15,"Romance, marriage and divorce",serious
+15,"Romance, marriage and divorce",wedding
+16,Daily routines,bath
+16,Daily routines,bother
+16,Daily routines,brush your teeth
+16,Daily routines,cereal
+16,Daily routines,chat
+16,Daily routines,clean your teeth
+16,Daily routines,cleaner
+16,Daily routines,come round
+16,Daily routines,do housework
+16,Daily routines,do the shopping
+16,Daily routines,do the washing/ironing (etc.)
+16,Daily routines,doesn’t bother
+16,Daily routines,eat in/out
+16,Daily routines,fall asleep
+16,Daily routines,feed
+16,Daily routines,fortunately
+16,Daily routines,get up
+16,Daily routines,"go (swimming/shopping, etc.)"
+16,Daily routines,go out
+16,Daily routines,go to bed
+16,Daily routines,go to sleep
+16,Daily routines,have a bath
+16,Daily routines,have a late night
+16,Daily routines,have a sleep
+16,Daily routines,have a wash/shower etc.
+16,Daily routines,have an early night
+16,Daily routines,housework
+16,Daily routines,instead
+16,Daily routines,ironing
+16,Daily routines,light lunch
+16,Daily routines,luckily
+16,Daily routines,main meal
+16,Daily routines,make the bed
+16,Daily routines,make-up
+16,Daily routines,meal
+16,Daily routines,once a week/month (etc.)
+16,Daily routines,shave
+16,Daily routines,shower
+16,Daily routines,sleep
+16,Daily routines,snack
+16,Daily routines,spare time
+16,Daily routines,stay in
+16,Daily routines,take/do exercise
+16,Daily routines,take/have a shower
+16,Daily routines,takeaway
+16,Daily routines,wake (sb) up
+16,Daily routines,wash
+16,Daily routines,washing
+17,The place where you live,air conditioning
+17,The place where you live,apartment
+17,The place where you live,balcony
+17,The place where you live,block of flats
+17,The place where you live,central heating
+17,The place where you live,character
+17,The place where you live,charming
+17,The place where you live,cottage
+17,The place where you live,dark
+17,The place where you live,downstairs
+17,The place where you live,flat
+17,The place where you live,front door
+17,The place where you live,heat
+17,The place where you live,lift
+17,The place where you live,light
+17,The place where you live,location
+17,The place where you live,lots of character
+17,The place where you live,move
+17,The place where you live,on the first/second (etc.) floor
+17,The place where you live,on the outskirts
+17,The place where you live,own
+17,The place where you live,rent
+17,The place where you live,space
+17,The place where you live,steps
+17,The place where you live,top floor
+17,The place where you live,upstairs
+17,The place where you live,view
+18,Around the home,armchair
+18,Around the home,bathroom
+18,Around the home,blanket
+18,Around the home,blinds
+18,Around the home,carpet
+18,Around the home,choice
+18,Around the home,cooker
+18,Around the home,cupboard
+18,Around the home,curtains
+18,Around the home,cushion
+18,Around the home,dishwasher
+18,Around the home,duvet
+18,Around the home,en suite
+18,Around the home,firm
+18,Around the home,floor
+18,Around the home,fridge/freezer
+18,Around the home,kettle
+18,Around the home,microwave
+18,Around the home,oven
+18,Around the home,own
+18,Around the home,rug
+18,Around the home,share
+18,Around the home,sheet
+18,Around the home,sink
+18,Around the home,sofa
+18,Around the home,soft
+18,Around the home,spare room
+18,Around the home,study
+18,Around the home,tap
+18,Around the home,tiles
+18,Around the home,utility room
+18,Around the home,washbasin
+18,Around the home,washing machine
+18,Around the home,wooden
+19,Money,afford
+19,Money,amount
+19,Money,at home
+19,Money,bank account
+19,Money,bank loan
+19,Money,burn
+19,Money,cash
+19,Money,cashpoint
+19,Money,charge
+19,Money,coin
+19,Money,currency
+19,Money,deposit
+19,Money,dollar
+19,Money,earn
+19,Money,euro
+19,Money,fall over
+19,Money,fee(s)
+19,Money,fifty-pence piece
+19,Money,hire
+19,Money,in credit
+19,Money,large number/amount
+19,Money,note
+19,Money,one pound coin
+19,Money,out of order
+19,Money,owe
+19,Money,pay back
+19,Money,rent
+19,Money,save (up)
+19,Money,spill
+19,Money,sterling
+19,Money,student loan
+19,Money,tear
+19,Money,ten pound note
+19,Money,there’s something wrong with …
+19,Money,value for money
+19,Money,waste
+19,Money,waste of money
+19,Money,work
+20,Health,ache
+20,Health,backache
+20,Health,bandage
+20,Health,bleed
+20,Health,cancer
+20,Health,check
+20,Health,cough
+20,Health,cut
+20,Health,disease
+20,Health,feel sick
+20,Health,flu
+20,Health,headache
+20,Health,heart
+20,Health,heart attack
+20,Health,hurt
+20,Health,illness
+20,Health,liver
+20,Health,lung cancer
+20,Health,lungs
+20,Health,medicine
+20,Health,operation
+20,Health,pain
+20,Health,painful
+20,Health,patient
+20,Health,serious
+20,Health,sore throat
+20,Health,stomach ache
+20,Health,suffer from sth
+20,Health,surgeon
+20,Health,surgery
+20,Health,tablet
+20,Health,temperature
+21,Clothes,backpack
+21,Clothes,boots
+21,Clothes,bracelet
+21,Clothes,bright
+21,Clothes,button
+21,Clothes,cap
+21,Clothes,casual
+21,Clothes,change into sth
+21,Clothes,collar
+21,Clothes,do sth up
+21,Clothes,earrings
+21,Clothes,get dressed
+21,Clothes,in black/blue/brown (etc.)
+21,Clothes,jacket
+21,Clothes,jeans
+21,Clothes,jumper
+21,Clothes,necklace
+21,Clothes,ring
+21,Clothes,rucksack
+21,Clothes,scarf
+21,Clothes,skirt
+21,Clothes,sleeve
+21,Clothes,smart
+21,Clothes,stylish
+21,Clothes,suit
+21,Clothes,sweater
+21,Clothes,T-shirt
+21,Clothes,tie
+21,Clothes,tights
+21,Clothes,top
+21,Clothes,trainers
+21,Clothes,trousers
+21,Clothes,undo
+21,Clothes,zip
+22,Fashion and buying clothes,atmosphere
+22,Fashion and buying clothes,changing room
+22,Fashion and buying clothes,clothes
+22,Fashion and buying clothes,designer label
+22,Fashion and buying clothes,dress
+22,Fashion and buying clothes,dress in
+22,Fashion and buying clothes,fit
+22,Fashion and buying clothes,go with sth
+22,Fashion and buying clothes,have got sth on
+22,Fashion and buying clothes,in fashion
+22,Fashion and buying clothes,I’ll leave it
+22,Fashion and buying clothes,I’ll take it
+22,Fashion and buying clothes,I’m being served
+22,Fashion and buying clothes,I’m looking for …
+22,Fashion and buying clothes,loose
+22,Fashion and buying clothes,match
+22,Fashion and buying clothes,serve
+22,Fashion and buying clothes,shop
+22,Fashion and buying clothes,shop assistant
+22,Fashion and buying clothes,size
+22,Fashion and buying clothes,suit
+22,Fashion and buying clothes,that’s a pity
+22,Fashion and buying clothes,that’s a shame
+22,Fashion and buying clothes,tight
+22,Fashion and buying clothes,try sth on
+22,Fashion and buying clothes,wardrobe
+23,Shopping,basket
+23,Shopping,checkout
+23,Shopping,convenient
+23,Shopping,entrance
+23,Shopping,fresh
+23,Shopping,haggle
+23,Shopping,item
+23,Shopping,likely
+23,Shopping,make
+23,Shopping,queue
+23,Shopping,range
+23,Shopping,refund
+23,Shopping,replace
+23,Shopping,shelf
+23,Shopping,shopping centre
+23,Shopping,special offer
+23,Shopping,stall
+23,Shopping,street market
+23,Shopping,sweets
+23,Shopping,throw sth away
+23,Shopping,trolley
+23,Shopping,under one roof
+23,Shopping,wide range
+24,Food,aubergine
+24,Food,beans
+24,Food,beef
+24,Food,bitter
+24,Food,broccoli
+24,Food,bunch
+24,Food,cabbage
+24,Food,calf
+24,Food,carrot
+24,Food,coconut
+24,Food,courgette
+24,Food,crab
+24,Food,cucumber
+24,Food,flavour
+24,Food,garlic
+24,Food,grapes
+24,Food,hen
+24,Food,lamb
+24,Food,lemon
+24,Food,lettuce
+24,Food,melon
+24,Food,mushroom
+24,Food,mussels
+24,Food,oil
+24,Food,olives
+24,Food,onion
+24,Food,peach
+24,Food,pear
+24,Food,peas
+24,Food,red pepper
+24,Food,salad
+24,Food,salad dressing
+24,Food,salmon
+24,Food,spinach
+24,Food,strawberry
+24,Food,tomato
+24,Food,veal
+24,Food,vegetarian
+24,Food,vinegar
+25,Cooking,add
+25,Cooking,barbecue
+25,Cooking,boil
+25,Cooking,car park
+25,Cooking,chef
+25,Cooking,chop
+25,Cooking,clean
+25,Cooking,cook
+25,Cooking,cooker
+25,Cooking,dangerous
+25,Cooking,delicious
+25,Cooking,fry
+25,Cooking,frying pan
+25,Cooking,good/bad at sth
+25,Cooking,grill
+25,Cooking,horrible
+25,Cooking,ingredients
+25,Cooking,oven
+25,Cooking,peel
+25,Cooking,pie
+25,Cooking,raw
+25,Cooking,recipe
+25,Cooking,roast
+25,Cooking,saucepan
+25,Cooking,sour
+25,Cooking,spicy
+25,Cooking,stir
+25,Cooking,taste
+25,Cooking,tasty
+26,City life,advantage
+26,City life,away
+26,City life,crime rate
+26,City life,crowded
+26,City life,cultural
+26,City life,culture
+26,City life,dirty
+26,City life,disadvantage
+26,City life,dull
+26,City life,exhausted
+26,City life,get stuck
+26,City life,go on
+26,City life,in a hurry
+26,City life,lively
+26,City life,mix
+26,City life,nightlife
+26,City life,nowhere to park
+26,City life,own
+26,City life,quiet
+26,City life,rush hour
+26,City life,safe
+26,City life,stressed
+26,City life,stressful
+26,City life,town centre
+26,City life,traffic jam
+26,City life,value for money
+26,City life,variety
+26,City life,you (don’t) get …
+27,Life in the country,at night
+27,Life in the country,bank (of a river)
+27,Life in the country,branch (of a tree)
+27,Life in the country,countryside
+27,Life in the country,crop
+27,Life in the country,farmhouse
+27,Life in the country,farming
+27,Life in the country,fence
+27,Life in the country,field
+27,Life in the country,footpath
+27,Life in the country,fresh air
+27,Life in the country,gate
+27,Life in the country,grass
+27,Life in the country,ground
+27,Life in the country,hill
+27,Life in the country,hopeless
+27,Life in the country,keep
+27,Life in the country,leaves (on a tree)
+27,Life in the country,open space
+27,Life in the country,pick
+27,Life in the country,roots
+27,Life in the country,scenery
+27,Life in the country,season (in the year)
+27,Life in the country,sunset
+27,Life in the country,surrounded by
+27,Life in the country,the best/worst thing about …
+27,Life in the country,tractor
+27,Life in the country,tree
+27,Life in the country,up
+27,Life in the country,valley
+27,Life in the country,village
+27,Life in the country,woods
+27,Life in the country,you (don’t) get …
+28,Transport,a return
+28,Transport,away
+28,Transport,bicycle
+28,Transport,bike
+28,Transport,bus
+28,Transport,bus stop
+28,Transport,catch (a bus/train)
+28,Transport,coach
+28,Transport,complain
+28,Transport,complaint
+28,Transport,convenient
+28,Transport,cycle
+28,Transport,cyclist
+28,Transport,fare
+28,Transport,flight
+28,Transport,fly
+28,Transport,get in
+28,Transport,get off (a bus)
+28,Transport,get on (a bus)
+28,Transport,get out
+28,Transport,go by bike/car (etc.)
+28,Transport,journey
+28,Transport,lorry
+28,Transport,miss the bus/train (etc.)
+28,Transport,queue
+28,Transport,reliable
+28,Transport,ride
+28,Transport,round the corner
+28,Transport,season ticket
+28,Transport,taxi rank
+28,Transport,truck
+28,Transport,van
+28,Transport,vehicle
+29,On the road,accident
+29,On the road,approach
+29,On the road,ask sb the way
+29,On the road,bend
+29,On the road,brake
+29,On the road,bridge
+29,On the road,crash into sth
+29,On the road,damage
+29,On the road,direct sb
+29,On the road,end up
+29,On the road,get lost
+29,On the road,injury
+29,On the road,inside lane
+29,On the road,lane (on a road)
+29,On the road,main road
+29,On the road,outside lane
+29,On the road,overtake
+29,On the road,parcel
+29,On the road,parked car
+29,On the road,pavement
+29,On the road,pedestrian
+29,On the road,pedestrian crossing
+29,On the road,road sign
+29,On the road,sign
+29,On the road,speed limit
+29,On the road,swerve
+29,On the road,traffic light(s)
+29,On the road,turning
+29,On the road,via
+29,On the road,way
+30,Notices and warnings,admission
+30,Notices and warnings,disturb
+30,Notices and warnings,do not leave bags unattended
+30,Notices and warnings,feed
+30,Notices and warnings,fragile
+30,Notices and warnings,in progress
+30,Notices and warnings,injure
+30,Notices and warnings,keep off sth
+30,Notices and warnings,keep right/left
+30,Notices and warnings,lean
+30,Notices and warnings,mind the step
+30,Notices and warnings,mind your head
+30,Notices and warnings,motorbike
+30,Notices and warnings,no entry
+30,Notices and warnings,no exit
+30,Notices and warnings,no parking
+30,Notices and warnings,no vacancies
+30,Notices and warnings,notice
+30,Notices and warnings,out of order
+30,Notices and warnings,queue
+30,Notices and warnings,silence
+30,Notices and warnings,sold out
+30,Notices and warnings,warning
+31,Classroom language,borrow
+31,Classroom language,CD player
+31,Classroom language,correct
+31,Classroom language,explain
+31,Classroom language,explain the difference between X and Y
+31,Classroom language,explanation
+31,Classroom language,highlight
+31,Classroom language,highlighter pen
+31,Classroom language,junction
+31,Classroom language,lend
+31,Classroom language,look sth up
+31,Classroom language,mean
+31,Classroom language,meaning
+31,Classroom language,measure
+31,Classroom language,on the way
+31,Classroom language,partner
+31,Classroom language,pencil sharpener
+31,Classroom language,repeat
+31,Classroom language,repetition
+31,Classroom language,rub sth out
+31,Classroom language,rubber
+31,Classroom language,ruler
+31,Classroom language,share
+31,Classroom language,sharpen
+31,Classroom language,socket
+31,Classroom language,spell
+31,Classroom language,spelling
+31,Classroom language,swap (places)
+31,Classroom language,turn sth down
+31,Classroom language,turn sth up
+31,Classroom language,use
+31,Classroom language,What does X mean?
+31,Classroom language,wow
+32,School education,atmosphere
+32,School education,attend
+32,School education,break
+32,School education,break the rules
+32,School education,break up
+32,School education,call
+32,School education,divide
+32,School education,do
+32,School education,dress
+32,School education,female
+32,School education,get a job
+32,School education,get into trouble
+32,School education,go on (to do sth)
+32,School education,in the past
+32,School education,leave (a place)
+32,School education,male
+32,School education,nursery school
+32,School education,relaxed
+32,School education,secondary school
+32,School education,smart
+32,School education,state education
+32,School education,stay at school
+32,School education,stay behind
+32,School education,strict
+32,School education,subject
+32,School education,system
+32,School education,term
+32,School education,timetable
+32,School education,uniform
+32,School education,vocational training
+32,School education,wear
+33,Studying English and taking exams,accent
+33,Studying English and taking exams,accurate(ly)
+33,Studying English and taking exams,alphabet
+33,Studying English and taking exams,basic
+33,Studying English and taking exams,candidate
+33,Studying English and taking exams,consonant
+33,Studying English and taking exams,do well
+33,Studying English and taking exams,do your best
+33,Studying English and taking exams,do/write an essay
+33,Studying English and taking exams,fail (an exam)
+33,Studying English and taking exams,fluent
+33,Studying English and taking exams,get sth wrong
+33,Studying English and taking exams,get through sth
+33,Studying English and taking exams,grade
+33,Studying English and taking exams,hard work
+33,Studying English and taking exams,hope to do sth
+33,Studying English and taking exams,increase
+33,Studying English and taking exams,make yourself understood
+33,Studying English and taking exams,mark
+33,Studying English and taking exams,pass an exam
+33,Studying English and taking exams,pick sth up
+33,Studying English and taking exams,retake sth
+33,Studying English and taking exams,revise
+33,Studying English and taking exams,revision
+33,Studying English and taking exams,simple
+33,Studying English and taking exams,take/do an exam
+33,Studying English and taking exams,try/do your best
+33,Studying English and taking exams,vowel
+33,Studying English and taking exams,wide vocabulary
+33,Studying English and taking exams,willing
+33,Studying English and taking exams,work on sth
+34,University education,architect
+34,University education,architecture
+34,University education,arts
+34,University education,business studies
+34,University education,businessman/woman
+34,University education,certificate
+34,University education,degree
+34,University education,do research
+34,University education,economics
+34,University education,economist
+34,University education,engineering
+34,University education,essay
+34,University education,experiment
+34,University education,go into business
+34,University education,go on (to do sth)
+34,University education,grade
+34,University education,graduate
+34,University education,lab
+34,University education,laboratory
+34,University education,last
+34,University education,law
+34,University education,lecturer
+34,University education,library
+34,University education,medicine
+34,University education,qualification
+34,University education,qualified
+34,University education,qualify
+34,University education,research
+34,University education,science
+34,University education,succeed (in doing sth)
+34,University education,successful
+34,University education,teaching
+34,University education,undergraduate
+34,University education,unsuccessful
+35,Jobs,accountant
+35,Jobs,air force
+35,Jobs,architect
+35,Jobs,army
+35,Jobs,brick
+35,Jobs,build
+35,Jobs,builder
+35,Jobs,carpenter
+35,Jobs,dentist
+35,Jobs,design
+35,Jobs,electrician
+35,Jobs,emergency services
+35,Jobs,engineer
+35,Jobs,fire brigade
+35,Jobs,fireman/firefighter
+35,Jobs,fix
+35,Jobs,GP
+35,Jobs,install
+35,Jobs,join
+35,Jobs,lawyer
+35,Jobs,lecturer
+35,Jobs,mend
+35,Jobs,navy
+35,Jobs,nurse
+35,Jobs,operate on sb
+35,Jobs,repair
+35,Jobs,represent
+35,Jobs,sailor
+35,Jobs,soldier
+35,Jobs,surgeon
+35,Jobs,surgery
+35,Jobs,treat
+35,Jobs,wood
+36,Talking about your work,a week/month/year (etc.)
+36,Talking about your work,admin
+36,Talking about your work,advise
+36,Talking about your work,complain
+36,Talking about your work,complaint
+36,Talking about your work,conditions
+36,Talking about your work,consultant
+36,Talking about your work,day-to-day
+36,Talking about your work,deal with
+36,Talking about your work,do/work overtime
+36,Talking about your work,earn
+36,Talking about your work,fixed (hours)
+36,Talking about your work,give sb advice
+36,Talking about your work,handle
+36,Talking about your work,in charge of
+36,Talking about your work,income
+36,Talking about your work,income tax
+36,Talking about your work,make (money)
+36,Talking about your work,minimum wage
+36,Talking about your work,nine-to-five
+36,Talking about your work,off
+36,Talking about your work,overtime
+36,Talking about your work,pay
+36,Talking about your work,responsible for
+36,Talking about your work,run
+36,Talking about your work,salary
+36,Talking about your work,set sth up
+36,Talking about your work,vet
+36,Talking about your work,wage
+36,Talking about your work,What do you do?
+36,Talking about your work,What does that involve?
+36,Talking about your work,What’s your job?
+36,Talking about your work,wide awake
+37,Making a career,abroad
+37,Making a career,application (job)
+37,Making a career,apply for sth
+37,Making a career,CV
+37,Making a career,employ sb
+37,Making a career,experience
+37,Making a career,full-time
+37,Making a career,give sb the sack
+37,Making a career,gun
+37,Making a career,interview
+37,Making a career,mechanic
+37,Making a career,own
+37,Making a career,owner
+37,Making a career,part-time
+37,Making a career,pay rise
+37,Making a career,quit
+37,Making a career,resign
+37,Making a career,resignation
+37,Making a career,retire
+37,Making a career,retirement
+37,Making a career,sack
+37,Making a career,succeed (in doing sth)
+37,Making a career,success
+37,Making a career,successful
+37,Making a career,training
+37,Making a career,unemployed
+37,Making a career,unemployment
+38,Working in an office,absent
+38,Working in an office,appointment
+38,Working in an office,arrange
+38,Working in an office,arrangement
+38,Working in an office,attend
+38,Working in an office,attendance
+38,Working in an office,bin
+38,Working in an office,break down
+38,Working in an office,broken down
+38,Working in an office,calculator
+38,Working in an office,calendar
+38,Working in an office,colleague
+38,Working in an office,diary
+38,Working in an office,files
+38,Working in an office,filing cabinet
+38,Working in an office,invoice
+38,Working in an office,involve
+38,Working in an office,keyboard
+38,Working in an office,loads of sth
+38,Working in an office,noticeboard
+38,Working in an office,off
+38,Working in an office,organisation
+38,Working in an office,organise
+38,Working in an office,paperwork
+38,Working in an office,photocopier
+38,Working in an office,run out of sth
+38,Working in an office,show sb around
+38,Working in an office,type
+38,Working in an office,work
+39,Running a company,a great deal
+39,Running a company,achieve
+39,Running a company,achievement
+39,Running a company,aim
+39,Running a company,ambition
+39,Running a company,attract attention
+39,Running a company,bakery
+39,Running a company,branch (of a company)
+39,Running a company,client
+39,Running a company,contacts
+39,Running a company,currently
+39,Running a company,daily
+39,Running a company,deliver
+39,Running a company,demand
+39,Running a company,employee
+39,Running a company,expand
+39,Running a company,firm
+39,Running a company,former
+39,Running a company,generation
+39,Running a company,growing
+39,Running a company,headquarters
+39,Running a company,image
+39,Running a company,out of work
+39,Running a company,quality
+39,Running a company,run
+39,Running a company,set sth up
+39,Running a company,take over sth
+39,Running a company,take sth up
+39,Running a company,variety
+40,Business and finance,by
+40,Business and finance,charge
+40,Business and finance,decrease
+40,Business and finance,economy
+40,Business and finance,fall
+40,Business and finance,fear
+40,Business and finance,figures (number)
+40,Business and finance,go down
+40,Business and finance,go up
+40,Business and finance,gradual(ly)
+40,Business and finance,growing
+40,Business and finance,in a row
+40,Business and finance,increase
+40,Business and finance,inflation
+40,Business and finance,interest
+40,Business and finance,interest rate
+40,Business and finance,loan
+40,Business and finance,loss
+40,Business and finance,make a profit/loss
+40,Business and finance,pay back
+40,Business and finance,per cent
+40,Business and finance,percentage
+40,Business and finance,quarter
+40,Business and finance,raise
+40,Business and finance,recession
+40,Business and finance,rise
+40,Business and finance,sharp (ly)
+40,Business and finance,sign (of sth happening)
+40,Business and finance,slight
+40,Business and finance,slightly
+40,Business and finance,stay the same
+40,Business and finance,trade
+40,Business and finance,trend
+40,Business and finance,value
+41,Sport and leisure,athlete
+41,Sport and leisure,athletics
+41,Sport and leisure,boxing
+41,Sport and leisure,camping
+41,Sport and leisure,course
+41,Sport and leisure,court
+41,Sport and leisure,do a bit/lot of (sightseeing/hiking etc.)
+41,Sport and leisure,do exercise
+41,Sport and leisure,expert
+41,Sport and leisure,for pleasure
+41,Sport and leisure,"go (swimming/shopping, etc.)"
+41,Sport and leisure,goalkeeper
+41,Sport and leisure,golf course
+41,Sport and leisure,gym
+41,Sport and leisure,ice hockey
+41,Sport and leisure,jogging
+41,Sport and leisure,keep sb fit
+41,Sport and leisure,net
+41,Sport and leisure,race
+41,Sport and leisure,racing driver
+41,Sport and leisure,rink
+41,Sport and leisure,rock climbing
+41,Sport and leisure,sail
+41,Sport and leisure,sailing
+41,Sport and leisure,sailor
+41,Sport and leisure,ski
+41,Sport and leisure,skis
+41,Sport and leisure,stadium
+41,Sport and leisure,stick
+41,Sport and leisure,swimmer
+41,Sport and leisure,swimming costume
+41,Sport and leisure,tent
+41,Sport and leisure,track
+41,Sport and leisure,work out
+41,Sport and leisure,yoga
+42,Competitive sport,against
+42,Competitive sport,beat
+42,Competitive sport,break a record
+42,Competitive sport,captain
+42,Competitive sport,century
+42,Competitive sport,champion
+42,Competitive sport,championship
+42,Competitive sport,competition
+42,Competitive sport,defeat
+42,Competitive sport,draw (a game)
+42,Competitive sport,final
+42,Competitive sport,for fun
+42,Competitive sport,give up (sth)
+42,Competitive sport,incredible
+42,Competitive sport,individual
+42,Competitive sport,lead
+42,Competitive sport,league
+42,Competitive sport,lose (a game)
+42,Competitive sport,loser
+42,Competitive sport,nil
+42,Competitive sport,outstanding
+42,Competitive sport,race
+42,Competitive sport,record
+42,Competitive sport,result
+42,Competitive sport,superb
+42,Competitive sport,take part
+42,Competitive sport,team
+42,Competitive sport,tournament
+42,Competitive sport,victory
+42,Competitive sport,win
+42,Competitive sport,winner
+43,Books and films,act
+43,Books and films,acting
+43,Books and films,actor
+43,Books and films,author
+43,Books and films,biography
+43,Books and films,comedy
+43,Books and films,complicated
+43,Books and films,direct (a film)
+43,Books and films,directing
+43,Books and films,director (of a film)
+43,Books and films,entertain
+43,Books and films,entertainer
+43,Books and films,entertainment
+43,Books and films,fancy (doing) sth
+43,Books and films,fiction
+43,Books and films,film director
+43,Books and films,horror film
+43,Books and films,latest
+43,Books and films,literature
+43,Books and films,novel
+43,Books and films,reviewer
+43,Books and films,romantic comedy
+43,Books and films,science fiction
+43,Books and films,single
+43,Books and films,star
+43,Books and films,thriller
+43,Books and films,track
+43,Books and films,What’s on?
+44,Music,advert
+44,Music,album
+44,Music,audience
+44,Music,ballet (dancer)
+44,Music,bass guitar
+44,Music,bass guitarist
+44,Music,cellist
+44,Music,cello
+44,Music,classical music
+44,Music,come out
+44,Music,composer
+44,Music,conductor
+44,Music,download
+44,Music,drummer
+44,Music,drums
+44,Music,flautist
+44,Music,flute
+44,Music,folk music
+44,Music,guitar
+44,Music,guitarist
+44,Music,keyboard
+44,Music,keyboard player
+44,Music,live
+44,Music,lyrics
+44,Music,opera (singer)
+44,Music,orchestra
+44,Music,perform
+44,Music,performance
+44,Music,pianist
+44,Music,piano
+44,Music,record
+44,Music,recording studio
+44,Music,saxophone
+44,Music,saxophonist
+44,Music,solo artist
+44,Music,songwriter
+44,Music,taste
+44,Music,tradition
+44,Music,trumpet
+44,Music,trumpeter
+44,Music,tune
+44,Music,violin
+44,Music,violinist
+45,Special events,all over
+45,Special events,annual
+45,Special events,bring sb luck
+45,Special events,consist of
+45,Special events,custom
+45,Special events,customary
+45,Special events,display
+45,Special events,dress up
+45,Special events,festival
+45,Special events,fireworks
+45,Special events,gather
+45,Special events,harbour
+45,Special events,held
+45,Special events,involve
+45,Special events,last
+45,Special events,parade
+45,Special events,spectacular
+45,Special events,traditional
+45,Special events,up to
+46,Travel bookings,accommodation
+46,Travel bookings,adventure holiday
+46,Travel bookings,B&B
+46,Travel bookings,beach holiday
+46,Travel bookings,book online
+46,Travel bookings,city break
+46,Travel bookings,cruise
+46,Travel bookings,destination
+46,Travel bookings,family holiday
+46,Travel bookings,go on a cruise
+46,Travel bookings,iron
+46,Travel bookings,nearby
+46,Travel bookings,nearest
+46,Travel bookings,package holiday
+46,Travel bookings,pick sth up
+46,Travel bookings,recommend
+46,Travel bookings,review
+46,Travel bookings,skiing holiday
+46,Travel bookings,switch sth on
+46,Travel bookings,weekend break
+46,Travel bookings,wi-fi password
+47,Air travel,aircraft
+47,Air travel,announcement
+47,Air travel,available
+47,Air travel,baggage reclaim
+47,Air travel,board
+47,Air travel,boarding card
+47,Air travel,cabin crew
+47,Air travel,celebrate
+47,Air travel,check
+47,Air travel,check-in (desk)
+47,Air travel,customs
+47,Air travel,delay
+47,Air travel,departure
+47,Air travel,departures board
+47,Air travel,destination
+47,Air travel,duty free
+47,Air travel,excess baggage
+47,Air travel,fasten
+47,Air travel,flight number
+47,Air travel,"gate (3/5/10, etc.) (airport)"
+47,Air travel,go through
+47,Air travel,hand luggage
+47,Air travel,land
+47,Air travel,landing
+47,Air travel,luggage
+47,Air travel,nothing to declare
+47,Air travel,overhead locker
+47,Air travel,passenger
+47,Air travel,rare
+47,Air travel,runway
+47,Air travel,seat belt
+47,Air travel,suitcase
+47,Air travel,take-off
+47,Air travel,terminal (building)
+47,Air travel,trolley
+47,Air travel,weigh
+48,Hotels and restaurants,access (to sth)
+48,Hotels and restaurants,book
+48,Hotels and restaurants,check out
+48,Hotels and restaurants,course (of a meal)
+48,Hotels and restaurants,dessert
+48,Hotels and restaurants,double room
+48,Hotels and restaurants,facilities
+48,Hotels and restaurants,fully-booked
+48,Hotels and restaurants,heart of somewhere
+48,Hotels and restaurants,in advance
+48,Hotels and restaurants,include
+48,Hotels and restaurants,Internet access
+48,Hotels and restaurants,"I’ll have (chicken/fish, etc.)"
+48,Hotels and restaurants,main course
+48,Hotels and restaurants,medium
+48,Hotels and restaurants,reception
+48,Hotels and restaurants,reserve
+48,Hotels and restaurants,room service
+48,Hotels and restaurants,service
+48,Hotels and restaurants,single room
+48,Hotels and restaurants,sparkling
+48,Hotels and restaurants,starter
+48,Hotels and restaurants,stay
+48,Hotels and restaurants,still
+48,Hotels and restaurants,twin room
+48,Hotels and restaurants,well done
+49,Cafés,bagel
+49,Cafés,baguette
+49,Cafés,black coffee
+49,Cafés,cappuccino
+49,Cafés,crisps
+49,Cafés,croissant
+49,Cafés,cupcake
+49,Cafés,decaf
+49,Cafés,heat up
+49,Cafés,herbal tea
+49,Cafés,hot chocolate
+49,Cafés,large
+49,Cafés,latte
+49,Cafés,milkshake
+49,Cafés,muffin
+49,Cafés,napkins
+49,Cafés,panini
+49,Cafés,regular
+49,Cafés,smoothie
+49,Cafés,take away
+49,Cafés,toastie
+49,Cafés,tray
+49,Cafés,vegetarian
+49,Cafés,waffle
+49,Cafés,wrap
+50,Sightseeing holidays,attraction
+50,Sightseeing holidays,castle
+50,Sightseeing holidays,cathedral
+50,Sightseeing holidays,do a bit/lot of (sightseeing/hiking etc.)
+50,Sightseeing holidays,explore
+50,Sightseeing holidays,fountain
+50,Sightseeing holidays,get lost
+50,Sightseeing holidays,go out
+50,Sightseeing holidays,go sightseeing
+50,Sightseeing holidays,guidebook
+50,Sightseeing holidays,have a great/nice/terrible time
+50,Sightseeing holidays,have a look round
+50,Sightseeing holidays,historic monument
+50,Sightseeing holidays,lively
+50,Sightseeing holidays,magnificent
+50,Sightseeing holidays,market
+50,Sightseeing holidays,mosque
+50,Sightseeing holidays,packed
+50,Sightseeing holidays,palace
+50,Sightseeing holidays,see the sights
+50,Sightseeing holidays,sights
+50,Sightseeing holidays,sightseeing
+50,Sightseeing holidays,statue
+50,Sightseeing holidays,temple
+50,Sightseeing holidays,worth (+ noun/-ing)
+51,Holidays by the sea,at risk of
+51,Holidays by the sea,beach
+51,Holidays by the sea,breeze
+51,Holidays by the sea,calm (sea)
+51,Holidays by the sea,cliff
+51,Holidays by the sea,coast
+51,Holidays by the sea,diving
+51,Holidays by the sea,"go for (a swim/drive, etc.)"
+51,Holidays by the sea,"have a (swim/drink, etc.)"
+51,Holidays by the sea,recommend
+51,Holidays by the sea,recommend + that
+51,Holidays by the sea,rock
+51,Holidays by the sea,rough (sea)
+51,Holidays by the sea,sand
+51,Holidays by the sea,sandy
+51,Holidays by the sea,seaside resort
+51,Holidays by the sea,shade
+51,Holidays by the sea,shore
+51,Holidays by the sea,souvenir
+51,Holidays by the sea,spend time
+51,Holidays by the sea,stroll
+51,Holidays by the sea,sun cream
+51,Holidays by the sea,sunbathe
+51,Holidays by the sea,sunbathing
+51,Holidays by the sea,sunburn
+51,Holidays by the sea,sunscreen/sunblock
+51,Holidays by the sea,sunshine
+51,Holidays by the sea,suntan
+51,Holidays by the sea,surfing
+51,Holidays by the sea,volleyball
+51,Holidays by the sea,waves (in the sea)
+51,Holidays by the sea,windsurfing
+52,Newspapers and television,according to
+52,Newspapers and television,advert
+52,Newspapers and television,advertisement
+52,Newspapers and television,article
+52,Newspapers and television,broadcast
+52,Newspapers and television,celebrity
+52,Newspapers and television,channel
+52,Newspapers and television,chat show
+52,Newspapers and television,come out
+52,Newspapers and television,contents
+52,Newspapers and television,daily
+52,Newspapers and television,documentary
+52,Newspapers and television,e-paper
+52,Newspapers and television,forum
+52,Newspapers and television,headline
+52,Newspapers and television,it said in
+52,Newspapers and television,journalist
+52,Newspapers and television,media reporting
+52,Newspapers and television,mobile edition
+52,Newspapers and television,monthly
+52,Newspapers and television,national
+52,Newspapers and television,news
+52,Newspapers and television,paper
+52,Newspapers and television,reality TV show
+52,Newspapers and television,regional
+52,Newspapers and television,report
+52,Newspapers and television,reporter
+52,Newspapers and television,review
+52,Newspapers and television,say
+52,Newspapers and television,series
+52,Newspapers and television,soap opera
+52,Newspapers and television,station
+52,Newspapers and television,the news
+52,Newspapers and television,weather forecast
+52,Newspapers and television,weekly
+52,Newspapers and television,well known
+53,Phoning and texting,abbreviation
+53,Phoning and texting,answerphone
+53,Phoning and texting,call
+53,Phoning and texting,Could I speak to …?
+53,Phoning and texting,dial
+53,Phoning and texting,dialling code
+53,Phoning and texting,emergency
+53,Phoning and texting,engaged
+53,Phoning and texting,get through
+53,Phoning and texting,give sb a ring
+53,Phoning and texting,"Is that (Joe, Emma, etc …?)"
+53,Phoning and texting,landline
+53,Phoning and texting,leave a message
+53,Phoning and texting,mainly
+53,Phoning and texting,mobile number
+53,Phoning and texting,mostly
+53,Phoning and texting,on the phone
+53,Phoning and texting,out
+53,Phoning and texting,phone sb back
+53,Phoning and texting,ring
+53,Phoning and texting,speaking
+53,Phoning and texting,text
+53,Phoning and texting,texting
+53,Phoning and texting,Who’s calling?
+53,Phoning and texting,wrong number
+54,Computers,anti-virus software
+54,Computers,application (computer)
+54,Computers,back up sth
+54,Computers,backup
+54,Computers,copy
+54,Computers,crash
+54,Computers,create
+54,Computers,cut
+54,Computers,document
+54,Computers,double-click
+54,Computers,enter (a password)
+54,Computers,existing
+54,Computers,FAQs
+54,Computers,file (computer)
+54,Computers,file menu
+54,Computers,hard drive/disk
+54,Computers,icon
+54,Computers,install
+54,Computers,keyboard
+54,Computers,laptop
+54,Computers,log in/on
+54,Computers,log off/out
+54,Computers,mouse (computer)
+54,Computers,mouse mat
+54,Computers,operating system
+54,Computers,password
+54,Computers,paste
+54,Computers,PC
+54,Computers,run
+54,Computers,save
+54,Computers,software
+54,Computers,spacebar
+54,Computers,store
+54,Computers,username
+54,Computers,virus
+55,Email and the Internet,access (to sth)
+55,Email and the Internet,add to basket/bag
+55,Email and the Internet,anti-virus software
+55,Email and the Internet,at
+55,Email and the Internet,attachment
+55,Email and the Internet,blog
+55,Email and the Internet,blogger
+55,Email and the Internet,browse
+55,Email and the Internet,browser
+55,Email and the Internet,check your email
+55,Email and the Internet,checkout
+55,Email and the Internet,click on (a link)
+55,Email and the Internet,connect
+55,Email and the Internet,delete
+55,Email and the Internet,do an Internet search
+55,Email and the Internet,dot (in an email address)
+55,Email and the Internet,download
+55,Email and the Internet,essential
+55,Email and the Internet,go online
+55,Email and the Internet,immediately
+55,Email and the Internet,instant messaging
+55,Email and the Internet,ISP
+55,Email and the Internet,item
+55,Email and the Internet,junk mail
+55,Email and the Internet,link (computer)
+55,Email and the Internet,on the Internet
+55,Email and the Internet,regularly
+55,Email and the Internet,reply
+55,Email and the Internet,search
+55,Email and the Internet,social networking site
+55,Email and the Internet,spam
+55,Email and the Internet,surf the web
+55,Email and the Internet,upload
+55,Email and the Internet,video clip
+55,Email and the Internet,webcam
+55,Email and the Internet,website
+56,Crime,arrest
+56,Crime,attack
+56,Crime,break in(to sth)
+56,Crime,burglar
+56,Crime,burglary
+56,Crime,catch (a criminal)
+56,Crime,commit a crime
+56,Crime,court (of law)
+56,Crime,crime
+56,Crime,criminal
+56,Crime,detective
+56,Crime,escape
+56,Crime,fine
+56,Crime,guilty
+56,Crime,hit
+56,Crime,innocent
+56,Crime,jail
+56,Crime,judge
+56,Crime,jury
+56,Crime,minor (offence)
+56,Crime,murder
+56,Crime,murderer
+56,Crime,offence
+56,Crime,rob
+56,Crime,robber
+56,Crime,robbery
+56,Crime,steal
+56,Crime,take
+56,Crime,theft
+56,Crime,thief
+56,Crime,under arrest
+56,Crime,worth
+57,Politics,above all
+57,Politics,ballot
+57,Politics,belief
+57,Politics,believe in
+57,Politics,care
+57,Politics,constituency
+57,Politics,cut
+57,Politics,elderly
+57,Politics,elect
+57,Politics,election
+57,Politics,equal
+57,Politics,fair
+57,Politics,general election
+57,Politics,government
+57,Politics,hold an election
+57,Politics,leader
+57,Politics,MP
+57,Politics,reduce
+57,Politics,reduction
+57,Politics,secret
+57,Politics,support
+57,Politics,tax
+57,Politics,vote
+58,Climate change,act
+58,Climate change,climate change
+58,Climate change,create
+58,Climate change,destroy
+58,Climate change,drought
+58,Climate change,effect
+58,Climate change,efficient
+58,Climate change,energy
+58,Climate change,environment
+58,Climate change,excessive
+58,Climate change,exist
+58,Climate change,existence
+58,Climate change,flood
+58,Climate change,fossil fuel
+58,Climate change,global warming
+58,Climate change,greenhouse effect
+58,Climate change,greenhouse gases
+58,Climate change,oil
+58,Climate change,on record
+58,Climate change,reduce
+58,Climate change,result
+58,Climate change,save
+58,Climate change,solution
+58,Climate change,suffer
+58,Climate change,switch sth off
+58,Climate change,take action
+58,Climate change,tap
+58,Climate change,throw sth away
+58,Climate change,waste
+59,War and violence,a long time ago
+59,War and violence,army
+59,War and violence,attack
+59,War and violence,battle
+59,War and violence,bomb
+59,War and violence,carry guns
+59,War and violence,dead
+59,War and violence,death
+59,War and violence,defend
+59,War and violence,destroy
+59,War and violence,die
+59,War and violence,enemy
+59,War and violence,explode
+59,War and violence,fight
+59,War and violence,get away
+59,War and violence,gun
+59,War and violence,heart of somewhere
+59,War and violence,hide
+59,War and violence,kill
+59,War and violence,missing
+59,War and violence,search
+59,War and violence,shoot
+59,War and violence,soldier
+59,War and violence,violence
+59,War and violence,violent
+59,War and violence,war
+60,Time,a load of rubbish
+60,Time,ages ago
+60,Time,at the same time
+60,Time,by
+60,Time,century
+60,Time,decade
+60,Time,depth
+60,Time,during
+60,Time,for
+60,Time,for ages
+60,Time,for the time being
+60,Time,fortnight
+60,Time,have time for sth
+60,Time,in a week’s/month’s (etc.) time
+60,Time,in time
+60,Time,last
+60,Time,last long
+60,Time,lately
+60,Time,next time
+60,Time,nowadays
+60,Time,on time
+60,Time,one day
+60,Time,recently
+60,Time,second (time)
+60,Time,since
+60,Time,take (time)
+60,Time,the last time
+60,Time,the other day
+60,Time,these days
+60,Time,time (for us) to go/leave (etc.)
+60,Time,until
+61,Numbers,add sth up
+61,Numbers,addition
+61,Numbers,billion
+61,Numbers,calculate
+61,Numbers,calculation
+61,Numbers,calculator
+61,Numbers,cardinal number
+61,Numbers,decimal
+61,Numbers,divide
+61,Numbers,division
+61,Numbers,double (double four nine)
+61,Numbers,equals
+61,Numbers,fraction
+61,Numbers,get stuck
+61,Numbers,half
+61,Numbers,hundred
+61,Numbers,majority
+61,Numbers,million
+61,Numbers,minority
+61,Numbers,minus
+61,Numbers,multiplication
+61,Numbers,multiplied by
+61,Numbers,nought
+61,Numbers,oh
+61,Numbers,per cent
+61,Numbers,quarter
+61,Numbers,subtraction
+61,Numbers,thousand
+61,Numbers,three quarters
+61,Numbers,times
+61,Numbers,vast majority
+61,Numbers,work sth out
+61,Numbers,zero
+62,"Distance, dimensions and size",at least
+62,"Distance, dimensions and size",away
+62,"Distance, dimensions and size",couple
+62,"Distance, dimensions and size",distance
+62,"Distance, dimensions and size",down
+62,"Distance, dimensions and size",enormous
+62,"Distance, dimensions and size",feet
+62,"Distance, dimensions and size",giant
+62,"Distance, dimensions and size",height
+62,"Distance, dimensions and size",high (mountain)
+62,"Distance, dimensions and size",How long/wide (etc.) is …?
+62,"Distance, dimensions and size",huge
+62,"Distance, dimensions and size",inch
+62,"Distance, dimensions and size",length
+62,"Distance, dimensions and size",metal
+62,"Distance, dimensions and size",mile
+62,"Distance, dimensions and size",narrow
+62,"Distance, dimensions and size",nearest
+62,"Distance, dimensions and size",quite a long way
+62,"Distance, dimensions and size",round the corner
+62,"Distance, dimensions and size",size
+62,"Distance, dimensions and size",tall person/tree/building
+62,"Distance, dimensions and size",thick
+62,"Distance, dimensions and size",thin
+62,"Distance, dimensions and size",tiny
+62,"Distance, dimensions and size",up
+62,"Distance, dimensions and size",wide
+62,"Distance, dimensions and size",width
+62,"Distance, dimensions and size",yard
+63,"Objects, materials, shapes and colour",antique
+63,"Objects, materials, shapes and colour",bell
+63,"Objects, materials, shapes and colour",bone
+63,"Objects, materials, shapes and colour",bucket
+63,"Objects, materials, shapes and colour",can (of cola)
+63,"Objects, materials, shapes and colour",circle
+63,"Objects, materials, shapes and colour",cotton
+63,"Objects, materials, shapes and colour",flag
+63,"Objects, materials, shapes and colour",fur
+63,"Objects, materials, shapes and colour",grey
+63,"Objects, materials, shapes and colour",ladder
+63,"Objects, materials, shapes and colour",leather
+63,"Objects, materials, shapes and colour",material
+63,"Objects, materials, shapes and colour",national
+63,"Objects, materials, shapes and colour",navy blue
+63,"Objects, materials, shapes and colour",object
+63,"Objects, materials, shapes and colour",real
+63,"Objects, materials, shapes and colour",round
+63,"Objects, materials, shapes and colour",rubber
+63,"Objects, materials, shapes and colour",semi-circle
+63,"Objects, materials, shapes and colour",silk
+63,"Objects, materials, shapes and colour",square
+63,"Objects, materials, shapes and colour",stripe
+63,"Objects, materials, shapes and colour",stylish
+63,"Objects, materials, shapes and colour",tissue
+63,"Objects, materials, shapes and colour",toy
+63,"Objects, materials, shapes and colour",wooden
+64,Containers and quantities,bag
+64,Containers and quantities,bar (of chocolate)
+64,Containers and quantities,bottle
+64,Containers and quantities,bowl
+64,Containers and quantities,box
+64,Containers and quantities,bunch
+64,Containers and quantities,cancel
+64,Containers and quantities,carton
+64,Containers and quantities,container
+64,Containers and quantities,contents
+64,Containers and quantities,couple
+64,Containers and quantities,dozen
+64,Containers and quantities,drop (of milk)
+64,Containers and quantities,half a dozen
+64,Containers and quantities,in large quantities
+64,Containers and quantities,jar
+64,Containers and quantities,jug
+64,Containers and quantities,packet
+64,Containers and quantities,pair
+64,Containers and quantities,piece
+64,Containers and quantities,quantity
+64,Containers and quantities,several
+64,Containers and quantities,sheet
+64,Containers and quantities,slice
+64,Containers and quantities,spoonful
+64,Containers and quantities,"tin (of fruit, etc.)"
+64,Containers and quantities,tube
+64,Containers and quantities,vase
+65,"Apologies, excuses and thanks",apologise for sth
+65,"Apologies, excuses and thanks",apology
+65,"Apologies, excuses and thanks",be delayed
+65,"Apologies, excuses and thanks",be held up
+65,"Apologies, excuses and thanks",cheers
+65,"Apologies, excuses and thanks",delay
+65,"Apologies, excuses and thanks",don’t worry
+65,"Apologies, excuses and thanks",excuse
+65,"Apologies, excuses and thanks",excuse me
+65,"Apologies, excuses and thanks",hold-up
+65,"Apologies, excuses and thanks",I beg your pardon
+65,"Apologies, excuses and thanks",I must apologise for …
+65,"Apologies, excuses and thanks",interrupt
+65,"Apologies, excuses and thanks",I’m sorry
+65,"Apologies, excuses and thanks",I’m sorry I’m late
+65,"Apologies, excuses and thanks",never mind
+65,"Apologies, excuses and thanks",no problem
+65,"Apologies, excuses and thanks",not at all
+65,"Apologies, excuses and thanks",oversleep
+65,"Apologies, excuses and thanks",sorry to disturb you
+65,"Apologies, excuses and thanks",street market
+65,"Apologies, excuses and thanks",terribly sorry
+65,"Apologies, excuses and thanks",thanks (very much)
+65,"Apologies, excuses and thanks",that’s all right/okay
+65,"Apologies, excuses and thanks",that’s very kind of you
+65,"Apologies, excuses and thanks",won’t be long
+66,"Requests, permission and suggestions",Could you (possibly) …?
+66,"Requests, permission and suggestions",fancy (doing) sth
+66,"Requests, permission and suggestions",How about …?
+66,"Requests, permission and suggestions",I don’t fancy that
+66,"Requests, permission and suggestions",I don’t mind
+66,"Requests, permission and suggestions",I wonder if you could …
+66,"Requests, permission and suggestions",if you like
+66,"Requests, permission and suggestions",in other words
+66,"Requests, permission and suggestions",I’d rather …
+66,"Requests, permission and suggestions",I’m afraid I can’t
+66,"Requests, permission and suggestions",no problem
+66,"Requests, permission and suggestions",of course
+66,"Requests, permission and suggestions",permission
+66,"Requests, permission and suggestions",reply
+66,"Requests, permission and suggestions",request
+66,"Requests, permission and suggestions",shall we …?
+66,"Requests, permission and suggestions",suggestion
+66,"Requests, permission and suggestions",sure
+66,"Requests, permission and suggestions",that’s a great idea
+66,"Requests, permission and suggestions",we could …
+66,"Requests, permission and suggestions",Why don’t we …?
+67,"Opinions, agreeing and disagreeing",according to
+67,"Opinions, agreeing and disagreeing",agree
+67,"Opinions, agreeing and disagreeing",at all
+67,"Opinions, agreeing and disagreeing",can’t stand
+67,"Opinions, agreeing and disagreeing",disagree
+67,"Opinions, agreeing and disagreeing",feel
+67,"Opinions, agreeing and disagreeing",How do you feel about …?
+67,"Opinions, agreeing and disagreeing",I see what you mean
+67,"Opinions, agreeing and disagreeing",in my opinion
+67,"Opinions, agreeing and disagreeing",my view/feeling is
+67,"Opinions, agreeing and disagreeing",partly
+67,"Opinions, agreeing and disagreeing",personally
+67,"Opinions, agreeing and disagreeing",say
+67,"Opinions, agreeing and disagreeing",to some extent
+67,"Opinions, agreeing and disagreeing",totally
+67,"Opinions, agreeing and disagreeing",wide range
+68,"Likes, dislikes, attitudes and preferences",attitude
+68,"Likes, dislikes, attitudes and preferences",be into sth
+68,"Likes, dislikes, attitudes and preferences",cheek
+68,"Likes, dislikes, attitudes and preferences",dislike
+68,"Likes, dislikes, attitudes and preferences",get used to sth
+68,"Likes, dislikes, attitudes and preferences",hate
+68,"Likes, dislikes, attitudes and preferences",have something/nothing in common
+68,"Likes, dislikes, attitudes and preferences",interest
+68,"Likes, dislikes, attitudes and preferences",interested in
+68,"Likes, dislikes, attitudes and preferences",interests
+68,"Likes, dislikes, attitudes and preferences",keen on
+68,"Likes, dislikes, attitudes and preferences",love
+68,"Likes, dislikes, attitudes and preferences",me neither
+68,"Likes, dislikes, attitudes and preferences",me too
+68,"Likes, dislikes, attitudes and preferences",mind
+68,"Likes, dislikes, attitudes and preferences",neither do/am/can I
+68,"Likes, dislikes, attitudes and preferences",really
+68,"Likes, dislikes, attitudes and preferences",so do/am I
+68,"Likes, dislikes, attitudes and preferences",used to
+68,"Likes, dislikes, attitudes and preferences",would rather
+69,"Greetings, farewells and special expressions",bless you
+69,"Greetings, farewells and special expressions",cheers
+69,"Greetings, farewells and special expressions",congratulations
+69,"Greetings, farewells and special expressions",excuse me
+69,"Greetings, farewells and special expressions",farewell
+69,"Greetings, farewells and special expressions",female
+69,"Greetings, farewells and special expressions",good luck
+69,"Greetings, farewells and special expressions",greet
+69,"Greetings, farewells and special expressions",greeting
+69,"Greetings, farewells and special expressions",How about you?
+69,"Greetings, farewells and special expressions",How about …?
+69,"Greetings, farewells and special expressions",How are things?
+69,"Greetings, farewells and special expressions",How’s it going?
+69,"Greetings, farewells and special expressions",introduce sb
+69,"Greetings, farewells and special expressions",male
+69,"Greetings, farewells and special expressions",nice to meet you
+69,"Greetings, farewells and special expressions",not (so) bad
+69,"Greetings, farewells and special expressions",once
+69,"Greetings, farewells and special expressions",same to you
+69,"Greetings, farewells and special expressions",shake hands
+69,"Greetings, farewells and special expressions",situation
+69,"Greetings, farewells and special expressions",stranger
+69,"Greetings, farewells and special expressions",take care
+69,"Greetings, farewells and special expressions",thank goodness/God
+69,"Greetings, farewells and special expressions",twice
+70,Prefixes: changing meaning,appear
+70,Prefixes: changing meaning,correct
+70,Prefixes: changing meaning,director (of a company)
+70,Prefixes: changing meaning,disagree
+70,Prefixes: changing meaning,disappear
+70,Prefixes: changing meaning,dishonest
+70,Prefixes: changing meaning,get dressed
+70,Prefixes: changing meaning,get undressed
+70,Prefixes: changing meaning,honest
+70,Prefixes: changing meaning,ill
+70,Prefixes: changing meaning,illegal
+70,Prefixes: changing meaning,incorrect
+70,Prefixes: changing meaning,irregular
+70,Prefixes: changing meaning,legal
+70,Prefixes: changing meaning,lock
+70,Prefixes: changing meaning,mishear
+70,Prefixes: changing meaning,misunderstand
+70,Prefixes: changing meaning,overcharge
+70,Prefixes: changing meaning,pack
+70,Prefixes: changing meaning,rewrite
+70,Prefixes: changing meaning,unable
+70,Prefixes: changing meaning,uncomfortable
+70,Prefixes: changing meaning,unfair
+70,Prefixes: changing meaning,unlikely
+70,Prefixes: changing meaning,unlock
+70,Prefixes: changing meaning,unlucky
+70,Prefixes: changing meaning,unpack
+71,Suffixes: forming nouns,ability
+71,Suffixes: forming nouns,able
+71,Suffixes: forming nouns,actor
+71,Suffixes: forming nouns,artist
+71,Suffixes: forming nouns,colourful
+71,Suffixes: forming nouns,dancer
+71,Suffixes: forming nouns,develop
+71,Suffixes: forming nouns,development
+71,Suffixes: forming nouns,discuss
+71,Suffixes: forming nouns,discussion
+71,Suffixes: forming nouns,economist
+71,Suffixes: forming nouns,fit
+71,Suffixes: forming nouns,fitness
+71,Suffixes: forming nouns,footballer
+71,Suffixes: forming nouns,govern
+71,Suffixes: forming nouns,government
+71,Suffixes: forming nouns,happiness
+71,Suffixes: forming nouns,helpful
+71,Suffixes: forming nouns,illness
+71,Suffixes: forming nouns,improve
+71,Suffixes: forming nouns,improvement
+71,Suffixes: forming nouns,inability
+71,Suffixes: forming nouns,invent
+71,Suffixes: forming nouns,invention
+71,Suffixes: forming nouns,manage
+71,Suffixes: forming nouns,management
+71,Suffixes: forming nouns,relax
+71,Suffixes: forming nouns,relaxation
+71,Suffixes: forming nouns,scientist
+71,Suffixes: forming nouns,similar
+71,Suffixes: forming nouns,similarity
+71,Suffixes: forming nouns,singer
+71,Suffixes: forming nouns,stupid
+71,Suffixes: forming nouns,stupidity
+71,Suffixes: forming nouns,translate (sth into sth)
+71,Suffixes: forming nouns,translation
+71,Suffixes: forming nouns,translator
+71,Suffixes: forming nouns,weak
+71,Suffixes: forming nouns,weakness
+72,Suffixes: forming adjectives,annual
+72,Suffixes: forming adjectives,brake
+72,Suffixes: forming adjectives,careful
+72,Suffixes: forming adjectives,careless
+72,Suffixes: forming adjectives,chat
+72,Suffixes: forming adjectives,comfortable
+72,Suffixes: forming adjectives,cultural
+72,Suffixes: forming adjectives,cure
+72,Suffixes: forming adjectives,dream
+72,Suffixes: forming adjectives,electrical
+72,Suffixes: forming adjectives,enjoyable
+72,Suffixes: forming adjectives,famous
+72,Suffixes: forming adjectives,fashionable
+72,Suffixes: forming adjectives,give sb a hug
+72,Suffixes: forming adjectives,guess
+72,Suffixes: forming adjectives,musical
+72,Suffixes: forming adjectives,national
+72,Suffixes: forming adjectives,normal
+72,Suffixes: forming adjectives,painful
+72,Suffixes: forming adjectives,painless
+72,Suffixes: forming adjectives,peaceful
+72,Suffixes: forming adjectives,personal (opinion)
+72,Suffixes: forming adjectives,reliable
+72,Suffixes: forming adjectives,significance
+72,Suffixes: forming adjectives,sociable
+72,Suffixes: forming adjectives,suitable
+72,Suffixes: forming adjectives,traditional
+72,Suffixes: forming adjectives,unbelievable
+72,Suffixes: forming adjectives,uncomfortable
+72,Suffixes: forming adjectives,unfashionable
+72,Suffixes: forming adjectives,unforgettable
+72,Suffixes: forming adjectives,unreasonable
+72,Suffixes: forming adjectives,unreliable
+72,Suffixes: forming adjectives,unsociable
+72,Suffixes: forming adjectives,unsuitable
+72,Suffixes: forming adjectives,useful
+72,Suffixes: forming adjectives,useless
+73,Compound nouns,aircraft
+73,Compound nouns,airline
+73,Compound nouns,airport
+73,Compound nouns,babysitter
+73,Compound nouns,birthday card
+73,Compound nouns,bus driver
+73,Compound nouns,bus station
+73,Compound nouns,bus stop
+73,Compound nouns,campsite
+73,Compound nouns,cashpoint
+73,Compound nouns,chest of drawers
+73,Compound nouns,credit card
+73,Compound nouns,crossroads
+73,Compound nouns,disc jockey (DJ)
+73,Compound nouns,DJ (disc jockey)
+73,Compound nouns,earrings
+73,Compound nouns,film-maker
+73,Compound nouns,full stop
+73,Compound nouns,haircut
+73,Compound nouns,hairdresser
+73,Compound nouns,hairdryer
+73,Compound nouns,ice hockey
+73,Compound nouns,ID card
+73,Compound nouns,income tax
+73,Compound nouns,mother tongue
+73,Compound nouns,sunglasses
+73,Compound nouns,T-shirt
+73,Compound nouns,toothbrush
+73,Compound nouns,toothpaste
+73,Compound nouns,traffic light(s)
+73,Compound nouns,travel agent
+73,Compound nouns,wheelchair
+74,Word partners,alarm
+74,Word partners,depend (on sth)
+74,Word partners,expecting a baby
+74,Word partners,fall in love
+74,Word partners,fast asleep
+74,Word partners,go on a diet
+74,Word partners,great fun
+74,Word partners,great importance
+74,Word partners,have children
+74,Word partners,heavy (traffic)
+74,Word partners,large number/amount
+74,Word partners,light
+74,Word partners,limited number/amount/choice
+74,Word partners,limited vocabulary
+74,Word partners,lose weight
+74,Word partners,loud noise
+74,Word partners,miss the bus/train (etc.)
+74,Word partners,quite likely
+74,Word partners,score a goal
+74,Word partners,serious
+74,Word partners,spend time
+74,Word partners,tell sb a joke
+74,Word partners,terribly sorry
+74,Word partners,vitally important
+74,Word partners,well aware
+74,Word partners,wide awake
+74,Word partners,wide choice
+74,Word partners,wide vocabulary
+75,Fixed phrases,apart from
+75,Fixed phrases,at once
+75,Fixed phrases,be (just) about to
+75,Fixed phrases,burst into tears
+75,Fixed phrases,by the way
+75,Fixed phrases,day after day
+75,Fixed phrases,except for
+75,Fixed phrases,for instance
+75,Fixed phrases,get rid of sth
+75,Fixed phrases,if I were you
+75,Fixed phrases,in a week’s/month’s (etc.) time
+75,Fixed phrases,in general
+75,Fixed phrases,miss sb
+75,Fixed phrases,night after night
+75,Fixed phrases,now and again
+75,Fixed phrases,now and then
+75,Fixed phrases,on and off
+75,Fixed phrases,on the whole
+75,Fixed phrases,once or twice
+75,Fixed phrases,out of the blue
+75,Fixed phrases,peace and quiet
+75,Fixed phrases,right away
+75,Fixed phrases,ring a bell
+75,Fixed phrases,sooner or later
+75,Fixed phrases,straight away
+75,Fixed phrases,to be honest
+76,Fixed phrases in conversation,"(I’m/you’re, etc.) kidding"
+76,Fixed phrases in conversation,can’t help it
+76,Fixed phrases in conversation,change your mind
+76,Fixed phrases in conversation,date of arrival/departure
+76,Fixed phrases in conversation,feel bad about sth
+76,Fixed phrases in conversation,have no idea
+76,Fixed phrases in conversation,How do you feel about …?
+76,Fixed phrases in conversation,I don’t believe it
+76,Fixed phrases in conversation,I suppose so
+76,Fixed phrases in conversation,in that case
+76,Fixed phrases in conversation,it/that depends
+76,Fixed phrases in conversation,kind of
+76,Fixed phrases in conversation,no way/chance
+76,Fixed phrases in conversation,not really
+76,Fixed phrases in conversation,pay attention
+76,Fixed phrases in conversation,sort of
+76,Fixed phrases in conversation,that sort/kind of thing
+76,Fixed phrases in conversation,that/it depends
+76,Fixed phrases in conversation,up and down
+76,Fixed phrases in conversation,wait and see
+76,Fixed phrases in conversation,What for?
+76,Fixed phrases in conversation,what if
+76,Fixed phrases in conversation,Why not?
+76,Fixed phrases in conversation,you know
+76,Fixed phrases in conversation,you must be joking
+77,Verb or adjective + preposition,afraid (of)
+77,Verb or adjective + preposition,agree
+77,Verb or adjective + preposition,aware of
+77,Verb or adjective + preposition,belong to
+77,Verb or adjective + preposition,concentrate
+77,Verb or adjective + preposition,depend (on sth)
+77,Verb or adjective + preposition,depend on sb
+77,Verb or adjective + preposition,different from
+77,Verb or adjective + preposition,good/bad at sth
+77,Verb or adjective + preposition,interested in
+77,Verb or adjective + preposition,mad about sb
+77,Verb or adjective + preposition,rely on
+77,Verb or adjective + preposition,satisfied with
+77,Verb or adjective + preposition,short of sth
+77,Verb or adjective + preposition,shout at/to sb
+77,Verb or adjective + preposition,similar
+77,Verb or adjective + preposition,something wrong with
+77,Verb or adjective + preposition,spend (money) on
+77,Verb or adjective + preposition,think of (+-ing)
+77,Verb or adjective + preposition,throw sth to/at sb
+77,Verb or adjective + preposition,tired of sth
+77,Verb or adjective + preposition,translate (sth into sth)
+77,Verb or adjective + preposition,worry about sth
+78,Prepositional phrases,at the end
+78,Prepositional phrases,at the moment
+78,Prepositional phrases,by accident
+78,Prepositional phrases,by chance
+78,Prepositional phrases,by hand
+78,Prepositional phrases,by mistake
+78,Prepositional phrases,in a hurry
+78,Prepositional phrases,in a moment
+78,Prepositional phrases,in business
+78,Prepositional phrases,in detail
+78,Prepositional phrases,in future
+78,Prepositional phrases,in tears
+78,Prepositional phrases,in the end
+78,Prepositional phrases,in time
+78,Prepositional phrases,on board
+78,Prepositional phrases,on business
+78,Prepositional phrases,on display
+78,Prepositional phrases,on fire
+78,Prepositional phrases,on purpose
+78,Prepositional phrases,on strike
+78,Prepositional phrases,on the phone
+78,Prepositional phrases,on time
+78,Prepositional phrases,out-of-date
+78,Prepositional phrases,up-to-date
+79,Phrasal verbs 1: form and meaning,carry on (with sth)
+79,Phrasal verbs 1: form and meaning,fall over
+79,Phrasal verbs 1: form and meaning,find out
+79,Phrasal verbs 1: form and meaning,get on (with sb)
+79,Phrasal verbs 1: form and meaning,give sth away
+79,Phrasal verbs 1: form and meaning,give up (sth)
+79,Phrasal verbs 1: form and meaning,go away
+79,Phrasal verbs 1: form and meaning,go back
+79,Phrasal verbs 1: form and meaning,go off
+79,Phrasal verbs 1: form and meaning,hurry (up)
+79,Phrasal verbs 1: form and meaning,lie down
+79,Phrasal verbs 1: form and meaning,look sth up
+79,Phrasal verbs 1: form and meaning,pick sb up
+79,Phrasal verbs 1: form and meaning,pick sth up
+79,Phrasal verbs 1: form and meaning,save (up)
+79,Phrasal verbs 1: form and meaning,sort sth out
+79,Phrasal verbs 1: form and meaning,switch sth on
+79,Phrasal verbs 1: form and meaning,take sb on
+79,Phrasal verbs 1: form and meaning,take sth back
+79,Phrasal verbs 1: form and meaning,wake (up)
+80,Phrasal verbs 2: grammar and style,break down
+80,Phrasal verbs 2: grammar and style,break in(to sth)
+80,Phrasal verbs 2: grammar and style,call for sb
+80,Phrasal verbs 2: grammar and style,get in
+80,Phrasal verbs 2: grammar and style,get over sth
+80,Phrasal verbs 2: grammar and style,hand sth out
+80,Phrasal verbs 2: grammar and style,hang around
+80,Phrasal verbs 2: grammar and style,hold on
+80,Phrasal verbs 2: grammar and style,invent
+80,Phrasal verbs 2: grammar and style,leave sb/sth out
+80,Phrasal verbs 2: grammar and style,look after sb
+80,Phrasal verbs 2: grammar and style,make sth up
+80,Phrasal verbs 2: grammar and style,omit
+80,Phrasal verbs 2: grammar and style,reject
+80,Phrasal verbs 2: grammar and style,set off
+80,Phrasal verbs 2: grammar and style,take sth off
+80,Phrasal verbs 2: grammar and style,turn sth off
+80,Phrasal verbs 2: grammar and style,turn sth on
+80,Phrasal verbs 2: grammar and style,turn sth/sb down
+81,"Make, do and take: uses and phrases",do a course
+81,"Make, do and take: uses and phrases",do exercise
+81,"Make, do and take: uses and phrases",do homework
+81,"Make, do and take: uses and phrases",do housework
+81,"Make, do and take: uses and phrases",do something/nothing
+81,"Make, do and take: uses and phrases",do your best
+81,"Make, do and take: uses and phrases",do your hair/make-up
+81,"Make, do and take: uses and phrases",have a look
+81,"Make, do and take: uses and phrases",have a wash/shower etc.
+81,"Make, do and take: uses and phrases",make
+81,"Make, do and take: uses and phrases",make a decision
+81,"Make, do and take: uses and phrases",make a mistake
+81,"Make, do and take: uses and phrases",make a noise
+81,"Make, do and take: uses and phrases",make an effort
+81,"Make, do and take: uses and phrases",make friends
+81,"Make, do and take: uses and phrases",miss sb
+81,"Make, do and take: uses and phrases",take
+81,"Make, do and take: uses and phrases",take (size 12)
+81,"Make, do and take: uses and phrases",take a break
+81,"Make, do and take: uses and phrases",take a course
+81,"Make, do and take: uses and phrases",take a look
+81,"Make, do and take: uses and phrases",take a photo
+81,"Make, do and take: uses and phrases",take things/it easy
+81,"Make, do and take: uses and phrases",take/do exercise
+81,"Make, do and take: uses and phrases",take/have a shower
+81,"Make, do and take: uses and phrases",take/make a decision
+82,"Key verbs: give, keep and miss",give
+82,"Key verbs: give, keep and miss",give a speech/lecture (etc.)
+82,"Key verbs: give, keep and miss",give sb a hand
+82,"Key verbs: give, keep and miss",give sb a ring
+82,"Key verbs: give, keep and miss",give sb a shock
+82,"Key verbs: give, keep and miss",give sth a push
+82,"Key verbs: give, keep and miss",hug
+82,"Key verbs: give, keep and miss",keep
+82,"Key verbs: give, keep and miss",keep (on) doing sth
+82,"Key verbs: give, keep and miss",keep a secret
+82,"Key verbs: give, keep and miss",keep in touch
+82,"Key verbs: give, keep and miss",keep sth up
+82,"Key verbs: give, keep and miss",miss
+82,"Key verbs: give, keep and miss",miss a chance/opportunity
+82,"Key verbs: give, keep and miss",miss sb
+82,"Key verbs: give, keep and miss",speech
+83,"Get: uses, phrases and phrasal verbs",get
+83,"Get: uses, phrases and phrasal verbs",get better
+83,"Get: uses, phrases and phrasal verbs",get in
+83,"Get: uses, phrases and phrasal verbs",get in touch
+83,"Get: uses, phrases and phrasal verbs",get out
+83,"Get: uses, phrases and phrasal verbs",get rid of sth
+83,"Get: uses, phrases and phrasal verbs",get sth back
+83,"Get: uses, phrases and phrasal verbs",get sth done
+83,"Get: uses, phrases and phrasal verbs",get sth wrong
+83,"Get: uses, phrases and phrasal verbs",get to know sb
+83,"Get: uses, phrases and phrasal verbs",get to sleep
+83,"Get: uses, phrases and phrasal verbs",get together
+83,"Get: uses, phrases and phrasal verbs",get worse
+83,"Get: uses, phrases and phrasal verbs",go and get
+84,Go: meanings and expressions,bald
+84,Go: meanings and expressions,blind
+84,Go: meanings and expressions,deaf
+84,Go: meanings and expressions,go
+84,Go: meanings and expressions,go (out) for a walk/drive (etc.)
+84,Go: meanings and expressions,"go (swimming/shopping, etc.)"
+84,Go: meanings and expressions,go and get
+84,Go: meanings and expressions,go away
+84,Go: meanings and expressions,go back
+84,Go: meanings and expressions,go for
+84,Go: meanings and expressions,"go for (a swim/drive, etc.)"
+84,Go: meanings and expressions,go grey/bald/deaf (etc.)
+84,Go: meanings and expressions,go mad
+84,Go: meanings and expressions,go on
+84,Go: meanings and expressions,go out
+84,Go: meanings and expressions,go well/badly
+84,Go: meanings and expressions,go wrong
+85,The senses,appear
+85,The senses,as if/though
+85,The senses,feel
+85,The senses,hear
+85,The senses,like
+85,The senses,listen
+85,The senses,look
+85,The senses,see
+85,The senses,seem
+85,The senses,sight
+85,The senses,smell
+85,The senses,sound
+85,The senses,taste
+85,The senses,touch
+85,The senses,watch
+86,Uncountable nouns,(a) bit of sth
+86,Uncountable nouns,a piece of sth
+86,Uncountable nouns,advice
+86,Uncountable nouns,behaviour
+86,Uncountable nouns,bin
+86,Uncountable nouns,chance
+86,Uncountable nouns,equipment
+86,Uncountable nouns,experience
+86,Uncountable nouns,furniture
+86,Uncountable nouns,knowledge (of sth)
+86,Uncountable nouns,news
+86,Uncountable nouns,piece
+86,Uncountable nouns,room
+86,Uncountable nouns,rubbish
+86,Uncountable nouns,scenery
+86,Uncountable nouns,sleeping bag
+86,Uncountable nouns,tent
+86,Uncountable nouns,toast
+87,Verb constructions 1,agree
+87,Verb constructions 1,ask sb for sth
+87,Verb constructions 1,attempt
+87,Verb constructions 1,avoid
+87,Verb constructions 1,blame sb for sth
+87,Verb constructions 1,consider
+87,Verb constructions 1,demand
+87,Verb constructions 1,enjoy (+ -ing)
+87,Verb constructions 1,hate
+87,Verb constructions 1,hope to do sth
+87,Verb constructions 1,imagine
+87,Verb constructions 1,insist on doing sth
+87,Verb constructions 1,intend
+87,Verb constructions 1,mind (+ -ing)
+87,Verb constructions 1,offer
+87,Verb constructions 1,recommend (+-ing)
+87,Verb constructions 1,suggest (+-ing)
+87,Verb constructions 1,think of (+-ing)
+88,Verb constructions 2,advise
+88,Verb constructions 2,convince
+88,Verb constructions 2,encourage
+88,Verb constructions 2,expect
+88,Verb constructions 2,help
+88,Verb constructions 2,hope that …
+88,Verb constructions 2,mention
+88,Verb constructions 2,notice
+88,Verb constructions 2,persuade
+88,Verb constructions 2,realise
+88,Verb constructions 2,recommend + that
+88,Verb constructions 2,remind
+88,Verb constructions 2,say + that
+88,Verb constructions 2,suggest + that
+88,Verb constructions 2,tell + obj + that
+88,Verb constructions 2,warn (+ obj + inf)
+89,Adjectives,absolutely
+89,Adjectives,amazed
+89,Adjectives,amazing
+89,Adjectives,annoyed
+89,Adjectives,annoying
+89,Adjectives,awful
+89,Adjectives,bored
+89,Adjectives,boring
+89,Adjectives,confused
+89,Adjectives,confusing
+89,Adjectives,delicious
+89,Adjectives,delighted
+89,Adjectives,depressed
+89,Adjectives,depressing
+89,Adjectives,disappointed
+89,Adjectives,disappointing
+89,Adjectives,dreadful
+89,Adjectives,embarrassed
+89,Adjectives,embarrassing
+89,Adjectives,enormous
+89,Adjectives,essential
+89,Adjectives,exhausted
+89,Adjectives,fascinating
+89,Adjectives,huge
+89,Adjectives,marvellous
+89,Adjectives,really
+89,Adjectives,shocked
+89,Adjectives,shocking
+89,Adjectives,terrific
+89,Adjectives,terrifying
+89,Adjectives,tiny
+89,Adjectives,tired
+89,Adjectives,tiring
+89,Adjectives,wonderful
+90,Prepositions: place and movement,above
+90,Prepositions: place and movement,after
+90,Prepositions: place and movement,against
+90,Prepositions: place and movement,among
+90,Prepositions: place and movement,at
+90,Prepositions: place and movement,before
+90,Prepositions: place and movement,below
+90,Prepositions: place and movement,beneath
+90,Prepositions: place and movement,beside
+90,Prepositions: place and movement,beyond
+90,Prepositions: place and movement,by
+90,Prepositions: place and movement,down
+90,Prepositions: place and movement,in
+90,Prepositions: place and movement,into
+90,Prepositions: place and movement,on
+90,Prepositions: place and movement,out of
+90,Prepositions: place and movement,over
+90,Prepositions: place and movement,right
+90,Prepositions: place and movement,round
+90,Prepositions: place and movement,through
+90,Prepositions: place and movement,towards
+90,Prepositions: place and movement,under
+90,Prepositions: place and movement,underneath
+91,Adverbs,a bit
+91,Adverbs,a little (bit)
+91,Adverbs,angrily
+91,Adverbs,briefly
+91,Adverbs,completely
+91,Adverbs,degree
+91,Adverbs,extremely
+91,Adverbs,fairly
+91,Adverbs,frequency
+91,Adverbs,frequently
+91,Adverbs,hardly ever
+91,Adverbs,incredibly
+91,Adverbs,occasionally
+91,Adverbs,quietly
+91,Adverbs,quite
+91,Adverbs,quite often
+91,Adverbs,rarely
+91,Adverbs,rather
+91,Adverbs,seldom
+91,Adverbs,slightly
+91,Adverbs,suddenly
+91,Adverbs,totally
+91,Adverbs,urgently
+92,Time and sequence,after
+92,Time and sequence,after that
+92,Time and sequence,afterwards
+92,Time and sequence,anyway
+92,Time and sequence,as
+92,Time and sequence,as soon as
+92,Time and sequence,at first
+92,Time and sequence,before
+92,Time and sequence,besides
+92,Time and sequence,eventually
+92,Time and sequence,finally
+92,Time and sequence,first of all
+92,Time and sequence,first(ly)
+92,Time and sequence,for a start
+92,Time and sequence,for one thing
+92,Time and sequence,in the end
+92,Time and sequence,just as
+92,Time and sequence,secondly
+92,Time and sequence,to begin with
+92,Time and sequence,while
+93,Addition and contrast,also
+93,Addition and contrast,although
+93,Addition and contrast,as well (as)
+93,Addition and contrast,besides
+93,Addition and contrast,despite
+93,Addition and contrast,even though
+93,Addition and contrast,however
+93,Addition and contrast,in addition (to)
+93,Addition and contrast,in spite of
+93,Addition and contrast,still
+93,Addition and contrast,though
+93,Addition and contrast,too
+93,Addition and contrast,what’s more
+93,Addition and contrast,whereas
+93,Addition and contrast,while
+93,Addition and contrast,yet
+94,"Reason, purpose, result, condition",as
+94,"Reason, purpose, result, condition",as a result
+94,"Reason, purpose, result, condition",as long as
+94,"Reason, purpose, result, condition",because
+94,"Reason, purpose, result, condition",because of
+94,"Reason, purpose, result, condition",due to
+94,"Reason, purpose, result, condition",in case
+94,"Reason, purpose, result, condition",in order to
+94,"Reason, purpose, result, condition",otherwise
+94,"Reason, purpose, result, condition",reason
+94,"Reason, purpose, result, condition",since
+94,"Reason, purpose, result, condition",so
+94,"Reason, purpose, result, condition",so that
+94,"Reason, purpose, result, condition",therefore
+94,"Reason, purpose, result, condition",unless
+94,"Reason, purpose, result, condition",whether
+95,Formal and informal English,assistance
+95,Formal and informal English,be dying for sth
+95,Formal and informal English,bloke
+95,Formal and informal English,cheers
+95,Formal and informal English,commence
+95,Formal and informal English,depart
+95,Formal and informal English,grant
+95,Formal and informal English,great
+95,Formal and informal English,I bet
+95,Formal and informal English,kids
+95,Formal and informal English,make it
+95,Formal and informal English,mate
+95,Formal and informal English,or so
+95,Formal and informal English,quite a bit
+95,Formal and informal English,regarding
+95,Formal and informal English,require
+95,Formal and informal English,stuff
+95,Formal and informal English,terrific
+95,Formal and informal English,the thing is …
+95,Formal and informal English,What are you up to?
+96,Completing forms and CVs,arrival
+96,Completing forms and CVs,career aim
+96,Completing forms and CVs,complicated
+96,Completing forms and CVs,country of origin
+96,Completing forms and CVs,CV
+96,Completing forms and CVs,date of arrival/departure
+96,Completing forms and CVs,date of birth
+96,Completing forms and CVs,enrolment form
+96,Completing forms and CVs,entry form
+96,Completing forms and CVs,fill sth in
+96,Completing forms and CVs,handwriting
+96,Completing forms and CVs,interests
+96,Completing forms and CVs,landing card
+96,Completing forms and CVs,marital status
+96,Completing forms and CVs,on my/your own
+96,Completing forms and CVs,personal details
+96,Completing forms and CVs,personal statement
+96,Completing forms and CVs,qualification
+96,Completing forms and CVs,reference
+96,Completing forms and CVs,registration form
+96,Completing forms and CVs,relevant
+96,Completing forms and CVs,require
+96,Completing forms and CVs,signature
+96,Completing forms and CVs,signed
+96,Completing forms and CVs,skills
+96,Completing forms and CVs,team
+96,Completing forms and CVs,tip
+96,Completing forms and CVs,type
+96,Completing forms and CVs,visa application form
+96,Completing forms and CVs,work experience
+97,Writing an essay,argument
+97,Writing an essay,as a result
+97,Writing an essay,believe
+97,Writing an essay,both sides of an argument
+97,Writing an essay,cause
+97,Writing an essay,compare
+97,Writing an essay,compared with/to
+97,Writing an essay,comparison
+97,Writing an essay,consequently
+97,Writing an essay,contrast
+97,Writing an essay,effect
+97,Writing an essay,generalisation
+97,Writing an essay,however
+97,Writing an essay,in contrast
+97,Writing an essay,in general
+97,Writing an essay,in the past
+97,Writing an essay,it seems to me
+97,Writing an essay,make a comparison
+97,Writing an essay,make generalisations
+97,Writing an essay,nowadays
+97,Writing an essay,obesity
+97,Writing an essay,on the one hand
+97,Writing an essay,on the other hand
+97,Writing an essay,on the whole
+97,Writing an essay,one of the advantages of …
+97,Writing an essay,result
+97,Writing an essay,some people believe …
+98,Formal letters and emails,apologise for sth
+98,Formal letters and emails,application (job)
+98,Formal letters and emails,available
+98,Formal letters and emails,confirm
+98,Formal letters and emails,Dear Sir/Madam
+98,Formal letters and emails,delay
+98,Formal letters and emails,details
+98,Formal letters and emails,enclose
+98,Formal letters and emails,enquire about sth
+98,Formal letters and emails,graduate
+98,Formal letters and emails,I am pleased to inform you …
+98,Formal letters and emails,I am writing in response to …
+98,Formal letters and emails,I am writing to …
+98,Formal letters and emails,I look forward to hearing from you
+98,Formal letters and emails,I regret to inform you …
+98,Formal letters and emails,I would be grateful if you could …
+98,Formal letters and emails,in response to
+98,Formal letters and emails,in writing
+98,Formal letters and emails,Kind regards
+98,Formal letters and emails,regarding
+98,Formal letters and emails,regret
+98,Formal letters and emails,sign
+98,Formal letters and emails,signature
+98,Formal letters and emails,support
+98,Formal letters and emails,Yours faithfully/sincerely
+99,Informal emails and messages,a laugh
+99,Informal emails and messages,actually
+99,Informal emails and messages,ages
+99,Informal emails and messages,all the best
+99,Informal emails and messages,anyway
+99,Informal emails and messages,be in touch
+99,Informal emails and messages,best wishes
+99,Informal emails and messages,fancy (doing) sth
+99,Informal emails and messages,get together
+99,Informal emails and messages,give my regards/love to …
+99,Informal emails and messages,hi
+99,Informal emails and messages,hope to do sth
+99,Informal emails and messages,in a week’s/month’s (etc.) time
+99,Informal emails and messages,in fact
+99,Informal emails and messages,join
+99,Informal emails and messages,let you know
+99,Informal emails and messages,Love (greeting)
+99,Informal emails and messages,once again
+99,Informal emails and messages,send my regards/love to
+99,Informal emails and messages,since
+100,Abbreviations,a paper
+100,Abbreviations,ad/advert
+100,Abbreviations,advert
+100,Abbreviations,and so on
+100,Abbreviations,BBC
+100,Abbreviations,bike
+100,Abbreviations,board
+100,Abbreviations,case
+100,Abbreviations,CV
+100,Abbreviations,Dr
+100,Abbreviations,e.g.
+100,Abbreviations,etc.
+100,Abbreviations,EU
+100,Abbreviations,exam
+100,Abbreviations,flu
+100,Abbreviations,for example
+100,Abbreviations,fridge
+100,Abbreviations,gym
+100,Abbreviations,i.e.
+100,Abbreviations,ID
+100,Abbreviations,in other words
+100,Abbreviations,ISP
+100,Abbreviations,lab
+100,Abbreviations,maths
+100,Abbreviations,MP
+100,Abbreviations,Mr
+100,Abbreviations,Mrs
+100,Abbreviations,PC
+100,Abbreviations,phone
+100,Abbreviations,photo
+100,Abbreviations,sales rep
+100,Abbreviations,St
+100,Abbreviations,telly
+100,Abbreviations,that’s to say
+100,Abbreviations,UN
+100,Abbreviations,vet
+100,Abbreviations,What does X stand for?
