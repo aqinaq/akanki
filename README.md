@@ -17,9 +17,12 @@ Then open the URL printed in your terminal. You can also open `index.html` direc
 - Turn pasted `Scenario:`, `Question:`, and `Answer:` blocks directly into a quiz deck
 - Spaced-repetition review with four confidence ratings
 - Automatic multiple-choice quizzes
+- Two built-in Project Management exam decks (Variant 1 with 50 questions and Variant 3 with 49 visible questions), preserving the original scenarios and A–E choices
 - Search across decks and cards
 - Turn pasted lecture notes or text-based files into a structured learning guide with a plain-language overview, key ideas, terms, and self-check questions
 - Local progress, streak, and review activity
 - Responsive desktop and mobile layouts
+- A2 and B1 vocabulary practice inspired by *English Vocabulary in Use*: meanings, synonyms, opposites, word families, sentence completion, and typed recall
+- Add your own level-tagged words, save personal example sentences, and track vocabulary accuracy locally
 
 The explanation workspace reads PDFs up to 150 MB page by page, along with `.txt`, `.md`, `.csv`, and `.tsv` files. PDF extraction uses Mozilla PDF.js in the browser, so the lecture file is not uploaded. Image-only or scanned PDFs are detected and need OCR before they can be explained.

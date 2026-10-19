@@ -4,6 +4,7 @@ const ICONS = {
   quiz: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.8 9a2.4 2.4 0 1 1 3.5 2.1c-.8.4-1.3 1-1.3 1.9M12 17h.01"/></svg>`,
   stats: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10m6 10V4m6 16v-7m4 7H2"/></svg>`,
   explain: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v14.5M4 19.5A1.5 1.5 0 0 0 5.5 21H20M4 19.5A1.5 1.5 0 0 1 5.5 18H19"/><path d="m13 7 .5 1.5L15 9l-1.5.5L13 11l-.5-1.5L11 9l1.5-.5z"/></svg>`,
+  vocabulary: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h7a4 4 0 0 1 4 4v12H8a4 4 0 0 0-4 2zM20 4h-1a4 4 0 0 0-4 4v12h5z"/><path d="M7 9h5M7 12h5"/></svg>`,
   plus: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>`,
   search: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>`,
   arrow: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>`,
@@ -25,15 +26,32 @@ const STARTER_DECKS = [
   ]}
 ].map(deck => ({...deck, cards:deck.cards.map((c,i)=>({id:`${deck.id}-${i}`,front:c[0],back:c[1],due:0,interval:0,ease:2.5,reviews:0}))}));
 
+const BUILT_IN_QUIZ_DECKS = window.PROJECT_MANAGEMENT_DECKS || [];
+const cloneDeck = deck => JSON.parse(JSON.stringify(deck));
+
 const store = {
   load(){
-    try { return JSON.parse(localStorage.getItem('akanki-data')) || {decks:STARTER_DECKS, streak:1, studied:0, history:[0,0,0,0,0,0,0]}; }
-    catch { return {decks:STARTER_DECKS, streak:1, studied:0, history:[0,0,0,0,0,0,0]}; }
+    const fresh=()=>({decks:[...BUILT_IN_QUIZ_DECKS.map(cloneDeck),...STARTER_DECKS.map(cloneDeck)],streak:1,studied:0,history:[0,0,0,0,0,0,0],vocabulary:{custom:[],progress:{},notes:{}}});
+    try {
+      const saved=JSON.parse(localStorage.getItem('akanki-data'));
+      if(!saved)return fresh();
+      saved.vocabulary ||= {custom:[],progress:{}};
+      saved.vocabulary.custom ||= [];
+      saved.vocabulary.progress ||= {};
+      saved.vocabulary.notes ||= {};
+      let changed=false;
+      BUILT_IN_QUIZ_DECKS.forEach(deck=>{
+        if(!saved.decks.some(existing=>existing.id===deck.id)){saved.decks.unshift(cloneDeck(deck));changed=true;}
+      });
+      if(changed)localStorage.setItem('akanki-data',JSON.stringify(saved));
+      return saved;
+    }
+    catch { return fresh(); }
   },
   save(){ localStorage.setItem('akanki-data', JSON.stringify(state.data)); }
 };
 
-const state = { data:store.load(), view:'home', deckId:null, search:'', study:null, quiz:null, explain:{source:'',fileName:'',level:'simple',result:null,status:'',pageCount:0,sourceType:''} };
+const state = { data:store.load(), view:'home', deckId:null, search:'', study:null, quiz:null, vocabulary:{level:'A2',mode:'mixed',session:null}, explain:{source:'',fileName:'',level:'simple',result:null,status:'',pageCount:0,sourceType:''} };
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
 const uid = () => Math.random().toString(36).slice(2,10);
@@ -47,6 +65,7 @@ function shell(content, active=state.view){
       <nav class="nav">
         ${nav('home','Home',ICONS.home,active)}
         ${nav('explain','Explain',ICONS.explain,active)}
+        ${nav('vocabulary','Words',ICONS.vocabulary,active)}
         ${nav('decks','My decks',ICONS.cards,active)}
         ${nav('quiz-select','Quick quiz',ICONS.quiz,active)}
         ${nav('stats','Progress',ICONS.stats,active)}
@@ -65,13 +84,15 @@ function render(){
   let content;
   if(state.view==='home') content=homeView();
   else if(state.view==='explain') content=explainView();
+  else if(state.view==='vocabulary') content=vocabularyView();
+  else if(state.view==='vocabulary-practice') content=vocabularyPracticeView();
   else if(state.view==='decks') content=decksView();
   else if(state.view==='deck') content=deckView();
   else if(state.view==='study') content=studyView();
   else if(state.view==='quiz-select') content=quizSelectView();
   else if(state.view==='quiz') content=quizView();
   else if(state.view==='stats') content=statsView();
-  $('#app').innerHTML = state.view==='study' || state.view==='quiz' ? content : shell(content,state.view==='deck'?'decks':state.view);
+  $('#app').innerHTML = ['study','quiz','vocabulary-practice'].includes(state.view) ? content : shell(content,state.view==='deck'?'decks':state.view);
   bindGlobal();
 }
 
@@ -97,7 +118,14 @@ function explainView(){
 }
 
 function explanationEmpty(){
-  return `<div class="explain-empty"><div class="explain-orbit"><span>✦</span></div><div class="eyebrow">Your guide will appear here</div><h2>From lecture to understanding</h2><p>We’ll break the material into a big-picture overview, essential ideas, useful terms, and questions that reveal what you actually understand.</p><div class="output-preview"><span>01</span><div><strong>The big picture</strong><small>A clear mental model first</small></div></div><div class="output-preview"><span>02</span><div><strong>Key ideas & terms</strong><small>The details worth keeping</small></div></div><div class="output-preview"><span>03</span><div><strong>Check your understanding</strong><small>Active recall, not rereading</small></div></div></div>`;
+  return `<div class="explain-empty">
+    <div class="empty-copy"><div class="explain-orbit"><span>✦</span></div><div class="eyebrow">Your guide will appear here</div><h2>Turn a wall of text into a learning map.</h2><p>We’ll pull out the signal, connect the important ideas, and give you a quick way to check what stuck.</p></div>
+    <div class="guide-preview" aria-hidden="true">
+      <div class="preview-top"><span class="preview-kicker">Your learning guide</span><span class="preview-status"><i></i> Ready to explore</span></div>
+      <div class="preview-hero"><span class="preview-spark">✦</span><div><small>In one sentence</small><strong>The main idea, without the noise.</strong></div></div>
+      <div class="preview-grid"><div class="preview-card preview-card-wide"><span class="preview-index">01</span><div><strong>See the big picture</strong><small>A clear mental model of how the topic fits together.</small></div><span class="preview-line long"></span><span class="preview-line"></span></div><div class="preview-card"><span class="preview-index coral">02</span><strong>Keep the essentials</strong><div class="preview-tags"><i></i><i></i><i></i></div></div><div class="preview-card"><span class="preview-index blue">03</span><strong>Recall it yourself</strong><span class="preview-question">?</span></div></div>
+    </div>
+  </div>`;
 }
 
 function sourceSentences(text){
@@ -130,10 +158,83 @@ function makeExplanation(text,level){
   return {title,overview:overview||contentClean.slice(0,500),ideas,definitions,questions,wordCount:contentClean.split(/\s+/).length,level};
 }
 function explanationResult(result){
-  return `<article class="explain-result"><div class="result-toolbar"><span class="result-label">Learning guide · ${result.wordCount} source words</span><button class="btn btn-soft btn-small" data-action="copy-explanation">Copy guide</button></div><div class="result-intro"><div class="eyebrow">${result.level==='exam'?'Exam-ready breakdown':result.level==='detailed'?'Detailed explanation':'Plain-language explanation'}</div><h2>${esc(result.title)}</h2><p>${esc(result.overview)}</p></div><section class="explain-section"><div class="section-number">01</div><div><h3>The big ideas</h3><div class="idea-list">${result.ideas.map((idea,i)=>`<div class="idea-item"><span>${i+1}</span><p>${esc(idea)}</p></div>`).join('')}</div></div></section>${result.definitions.length?`<section class="explain-section"><div class="section-number">02</div><div><h3>Terms to know</h3><div class="term-list">${result.definitions.map(item=>`<div><strong>${esc(item.term)}</strong><p>${esc(item.meaning)}</p></div>`).join('')}</div></div></section>`:''}<section class="explain-section"><div class="section-number">${result.definitions.length?'03':'02'}</div><div><h3>Check your understanding</h3><p class="section-copy">Answer these without looking back. If an answer feels fuzzy, revisit the matching idea above.</p><ol class="check-list">${result.questions.map(q=>`<li>${esc(q)}</li>`).join('')}</ol></div></section></article>`;
+  const readTime=Math.max(1,Math.ceil(result.wordCount/220));
+  const mode=result.level==='exam'?'Exam-ready':result.level==='detailed'?'Deep dive':'Plain language';
+  return `<article class="explain-result">
+    <div class="result-toolbar"><div class="result-label"><span class="result-live"><i></i>Guide ready</span><span>${result.wordCount} source words</span></div><button class="btn btn-soft btn-small" data-action="copy-explanation">Copy guide</button></div>
+    <div class="result-intro"><div class="result-intro-top"><div><div class="eyebrow">${mode} breakdown</div><h2>${esc(result.title)}</h2></div><span class="guide-mark">✦</span></div><div class="overview-callout"><span class="overview-label">The big picture</span><p>${esc(result.overview)}</p></div><div class="guide-stats"><span><strong>${result.ideas.length}</strong> key idea${result.ideas.length===1?'':'s'}</span><span><strong>${result.definitions.length}</strong> term${result.definitions.length===1?'':'s'}</span><span><strong>${readTime}</strong> min read</span></div></div>
+    <section class="explain-section ideas-section"><div class="section-number">01</div><div><div class="section-heading"><div><span class="section-kicker">Build the mental model</span><h3>The ideas that matter</h3></div><span class="section-icon idea-icon">↗</span></div><div class="idea-list">${result.ideas.map((idea,i)=>`<article class="idea-item"><div class="idea-item-head"><span>${String(i+1).padStart(2,'0')}</span><small>Key idea</small></div><p>${esc(idea)}</p></article>`).join('')}</div></div></section>
+    ${result.definitions.length?`<section class="explain-section terms-section"><div class="section-number">02</div><div><div class="section-heading"><div><span class="section-kicker">Make the language click</span><h3>Terms to know</h3></div><span class="section-icon term-icon">Aa</span></div><div class="term-list">${result.definitions.map(item=>`<article><span class="term-dot"></span><strong>${esc(item.term)}</strong><p>${esc(item.meaning)}</p></article>`).join('')}</div></div></section>`:''}
+    <section class="explain-section recall-section"><div class="section-number">${result.definitions.length?'03':'02'}</div><div><div class="section-heading"><div><span class="section-kicker">Close the notes first</span><h3>Can you explain it back?</h3></div><span class="section-icon recall-icon">?</span></div><p class="section-copy">Answer in your own words. If one feels fuzzy, jump back to the matching idea and try again.</p><ol class="check-list">${result.questions.map((q,i)=>`<li><span>${String(i+1).padStart(2,'0')}</span><p>${esc(q)}</p></li>`).join('')}</ol></div></section>
+  </article>`;
 }
 function explanationAsText(result){
   return `${result.title}\n\nTHE BIG PICTURE\n${result.overview}\n\nKEY IDEAS\n${result.ideas.map((idea,i)=>`${i+1}. ${idea}`).join('\n')}${result.definitions.length?`\n\nTERMS TO KNOW\n${result.definitions.map(item=>`${item.term}: ${item.meaning}`).join('\n')}`:''}\n\nCHECK YOUR UNDERSTANDING\n${result.questions.map((q,i)=>`${i+1}. ${q}`).join('\n')}`;
+}
+
+const VOCAB_MODES = {mixed:'Mixed practice',meaning:'Meaning',synonym:'Synonyms',opposite:'Opposites',family:'Word families',context:'In a sentence',recall:'Type the word'};
+const shuffle = items => {
+  const result=[...items];
+  for(let i=result.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[result[i],result[j]]=[result[j],result[i]];}
+  return result;
+};
+function vocabularyWords(level=state.vocabulary.level){
+  return [...(window.VOCABULARY_WORDS||[]),...state.data.vocabulary.custom].filter(word=>word.level===level);
+}
+function vocabularyView(){
+  const v=state.vocabulary, words=vocabularyWords(), progress=state.data.vocabulary.progress[v.level]||{attempted:0,correct:0};
+  const accuracy=progress.attempted?Math.round(progress.correct/progress.attempted*100):0;
+  return `<section class="page-head"><div><div class="eyebrow">Vocabulary lab</div><h1>Make words stick.</h1><p class="subhead">Explore a level, then test meanings, connections and usage.</p></div><button class="btn btn-outline" data-action="add-vocabulary-word">${ICONS.plus} Add a word</button></section>
+    <section class="vocab-intro"><div><span class="vocab-kicker">Your word path</span><h2>Learn a word from more than one angle.</h2><p>Notice its meaning, a close word, an opposite and a related noun. Then use it in a sentence.</p></div><div class="vocab-intro-stat"><strong>${progress.correct}</strong><span>correct answers<br>at this level</span></div></section>
+    <section class="vocab-controls"><div><span class="control-label">Choose a level</span><div class="vocab-tabs" role="group" aria-label="Vocabulary level">${['A2','B1'].map(level=>`<button class="vocab-tab ${v.level===level?'active':''}" data-vocab-level="${level}" aria-pressed="${v.level===level}">${level}<small>${level==='A2'?'Pre-intermediate':'Intermediate'}</small></button>`).join('')}</div></div><div><span class="control-label">Practice type</span><select id="vocab-mode" aria-label="Practice type">${Object.entries(VOCAB_MODES).map(([key,label])=>`<option value="${key}" ${v.mode===key?'selected':''}>${label}</option>`).join('')}</select></div><button class="btn btn-primary" data-action="start-vocabulary">Start practice ${ICONS.arrow}</button></section>
+    <div class="vocab-summary"><span><strong>${words.length}</strong> words in ${v.level}</span><span><strong>${accuracy}%</strong> answer accuracy</span><span>Progress stays in this browser</span></div>
+    <div class="section-head"><h2>Word bank</h2><span class="subhead">Tap a word to see its connections</span></div>
+    <div class="vocab-grid">${words.map((word,i)=>`<details class="vocab-word"><summary><span class="vocab-word-title">${esc(word.word)}</span><span class="vocab-word-meaning">${esc(word.meaning)}</span><span class="vocab-expand">＋</span></summary><div class="vocab-detail"><div><small>Similar</small><strong>${esc(word.synonym)}</strong></div><div><small>Opposite</small><strong>${esc(word.opposite)}</strong></div><div><small>Word family · noun</small><strong>${esc(word.family)}</strong></div><p>${esc(word.example.replace('___',word.word))}</p><span class="vocab-tip">💡 ${esc(word.tip)}</span><div class="vocab-own-example"><label for="vocab-note-${i}">Your own example</label><textarea id="vocab-note-${i}" maxlength="240" placeholder="Write a sentence about your life using this word…">${esc(state.data.vocabulary.notes[`${v.level}:${word.word}`]||'')}</textarea><button class="btn btn-soft btn-small" data-save-vocab-note="${i}">Save example</button></div></div></details>`).join('')}</div>`;
+}
+function makeVocabularyQuestion(word,mode,words){
+  const field=mode==='meaning'?'meaning':['context','recall'].includes(mode)?'word':mode;
+  const answer=word[field];
+  const distractors=shuffle([...new Set(words.filter(other=>other!==word).map(other=>other[field]).filter(value=>value&&value!==answer))]).slice(0,3);
+  const prompts={meaning:`What does “${word.word}” mean?`,synonym:`Which word is closest in meaning to “${word.word}”?`,opposite:`Which is the opposite of “${word.word}”?`,family:`Which noun belongs to the family of “${word.word}”?`,context:`Complete the sentence: ${word.example}`,recall:`Type the word that means “${word.meaning}”.`};
+  return {word,mode,prompt:prompts[mode],answer,options:shuffle([answer,...distractors]),selected:null};
+}
+function startVocabulary(){
+  const words=vocabularyWords();
+  if(words.length<4){toast('Add at least four words at this level');return;}
+  const modes=['meaning','synonym','opposite','family','context','recall'];
+  const chosen=shuffle(words).slice(0,Math.min(10,words.length));
+  const questions=chosen.map((word,i)=>makeVocabularyQuestion(word,state.vocabulary.mode==='mixed'?modes[i%modes.length]:state.vocabulary.mode,words));
+  state.vocabulary.session={level:state.vocabulary.level,mode:state.vocabulary.mode,questions,index:0,correct:0};
+  state.view='vocabulary-practice';render();
+}
+const vocabularyAnswerIsCorrect = question => String(question.selected).trim().toLocaleLowerCase()===String(question.answer).trim().toLocaleLowerCase();
+function vocabularyPracticeView(){
+  const session=state.vocabulary.session, question=session.questions[session.index];
+  if(!question){
+    const pct=Math.round(session.correct/session.questions.length*100);
+    return `<main class="main"><div class="result"><div class="result-ring" style="--score:${pct*3.6}deg"><strong>${pct}%</strong></div><div class="eyebrow">${session.level} practice complete</div><h1>${pct>=80?'Words are taking root.':'Keep the words growing.'}</h1><p class="subhead">${session.correct} of ${session.questions.length} correct. Try another task type to see the words from a new angle.</p><div class="actions" style="justify-content:center;margin-top:27px"><button class="btn btn-outline" data-action="start-vocabulary">Practice again</button><button class="btn btn-primary" data-action="exit-vocabulary">Back to words</button></div></div></main>`;
+  }
+  const answered=question.selected!==null;
+  return `<main class="main"><div class="study-shell"><div class="study-top"><button class="icon-btn" data-action="exit-vocabulary" aria-label="Exit practice">${ICONS.close}</button><div class="study-progress"><i style="width:${session.index/session.questions.length*100}%"></i></div><div class="study-counter">${session.index+1} / ${session.questions.length}</div></div><section class="quiz-card vocab-practice-card"><div class="quiz-label">${session.level} · ${esc(VOCAB_MODES[question.mode])}</div><div class="quiz-question">${esc(question.prompt)}</div>${question.mode==='recall'?`<form id="vocab-recall-form" class="vocab-recall"><input id="vocab-recall-input" autocomplete="off" placeholder="Type the word" aria-label="Your answer" value="${answered?esc(question.selected):''}" ${answered?'disabled':''} /><button class="btn btn-primary" ${answered?'disabled':''}>Check</button></form>`:`<div class="options">${question.options.map((option,i)=>`<button class="option ${answered?(option===question.answer?'correct':option===question.selected?'wrong':''):''}" data-vocab-option="${i}" ${answered?'disabled':''}><span class="option-letter">${'ABCD'[i]}</span><span>${esc(option)}</span></button>`).join('')}</div>`}${answered?`<div class="vocab-feedback ${vocabularyAnswerIsCorrect(question)?'right':'wrong'}"><strong>${vocabularyAnswerIsCorrect(question)?'Correct!':'The answer is '+esc(question.answer)+'.'}</strong><p>${esc(question.word.example.replace('___',question.word.word))}</p><span>💡 ${esc(question.word.tip)}</span></div>`:''}<div class="quiz-nav"><span class="quiz-shortcut">${question.mode==='recall'?'Type the word':'Choose an answer to continue'}</span><span></span><button class="btn btn-primary" data-action="vocabulary-next" ${answered?'':'disabled'}>${session.index===session.questions.length-1?'See results':'Next'} ${ICONS.arrow}</button></div></section></div></main>`;
+}
+function answerVocabulary(index){
+  const session=state.vocabulary.session, question=session?.questions[session.index];
+  if(!question||question.selected!==null)return;
+  if(typeof index!=='number'&&!String(index).trim()){toast('Type a word first');return;}
+  question.selected=typeof index==='number'?question.options[index]:String(index).trim().toLowerCase();
+  const progress=state.data.vocabulary.progress[session.level]||{attempted:0,correct:0};
+  progress.attempted++;
+  if(vocabularyAnswerIsCorrect(question)){progress.correct++;session.correct++;}
+  state.data.vocabulary.progress[session.level]=progress;
+  store.save();render();
+}
+function vocabularyWordModal(){
+  modal('Add a vocabulary word',`<p class="subhead" style="margin-bottom:18px">Build a full set of connections so the word can appear in every task type.</p><div class="field"><label>Level</label><select name="level"><option ${state.vocabulary.level==='A2'?'selected':''}>A2</option><option ${state.vocabulary.level==='B1'?'selected':''}>B1</option></select></div><div class="field"><label>Word</label><input name="word" required maxlength="50" placeholder="e.g. explore" /></div><div class="field"><label>Meaning</label><input name="meaning" required maxlength="150" placeholder="to travel to learn about a place" /></div><div class="field"><label>Synonym</label><input name="synonym" required maxlength="60" placeholder="investigate" /></div><div class="field"><label>Opposite</label><input name="opposite" required maxlength="60" placeholder="ignore" /></div><div class="field"><label>Related noun</label><input name="family" required maxlength="60" placeholder="exploration" /></div><div class="field"><label>Example sentence</label><input name="example" required maxlength="180" placeholder="We want to ___ the old town." /><span class="field-note">Use ___ where the word belongs.</span></div><div class="field"><label>Memory tip</label><input name="tip" required maxlength="180" placeholder="Exploration is the act of exploring." /></div>`,fd=>{
+    const word=Object.fromEntries(['level','word','meaning','synonym','opposite','family','example','tip'].map(key=>[key,String(fd.get(key)||'').trim()]));
+    if(!word.example.includes('___')){toast('Put ___ in the example sentence');return;}
+    if(vocabularyWords(word.level).some(item=>item.word.toLowerCase()===word.word.toLowerCase())){toast('That word is already in this level');return;}
+    state.data.vocabulary.custom.push(word);state.vocabulary.level=word.level;store.save();closeModal();render();toast('Word added to practice');
+  },'Add word');
 }
 
 function homeView(){
@@ -214,8 +315,9 @@ function startQuiz(id,count){
   const cards=[...d.cards].sort(()=>Math.random()-.5).slice(0,questionCount);
   const questions=cards.map(c=>{
     const supplied=(c.options||[]).filter(Boolean);
+    if(supplied.length>1)return {card:c,options:[...supplied],selected:null};
     const wrong=d.cards.filter(x=>x.id!==c.id&&x.back!==c.back).sort(()=>Math.random()-.5).map(x=>x.back);
-    const pool=supplied.length?supplied:[c.back,...wrong];
+    const pool=[c.back,...wrong];
     const options=[...new Set([c.back,...pool])].slice(0,4).sort(()=>Math.random()-.5);
     return {card:c,options,selected:null};
   });
@@ -224,7 +326,7 @@ function startQuiz(id,count){
 function quizView(){
   const q=state.quiz,d=state.data.decks.find(x=>x.id===q.deckId),item=q.questions[q.index]; if(!item) return quizDone(d,q);
   return `<main class="main"><div class="study-shell"><div class="study-top"><button class="icon-btn" data-action="exit-quiz">${ICONS.close}</button><div class="study-progress"><i style="width:${q.index/q.questions.length*100}%"></i></div><div class="study-counter">${q.index+1} / ${q.questions.length}</div></div>
-    <section class="quiz-card"><div class="quiz-label">Choose the correct answer</div>${item.card.scenario?`<div class="quiz-scenario"><strong>Scenario</strong><span>${esc(item.card.scenario)}</span></div>`:''}<div class="quiz-question">${esc(item.card.front)}</div><div class="options">${item.options.map((o,i)=>{const answered=item.selected!==null;const cls=answered?(o===item.card.back?'correct':o===item.selected?'wrong':''):'';return `<button class="option ${cls}" ${answered?'disabled':''} data-option="${i}"><span class="option-letter">${'ABCD'[i]}</span><span>${esc(o)}</span></button>`}).join('')}</div>${item.selected!==null?`<div class="answer-feedback ${item.selected===item.card.back?'is-correct':'is-wrong'}">${item.selected===item.card.back?'Correct':'Not quite'}${item.selected===item.card.back?'':` · Correct answer: ${esc(item.card.back)}`}</div>`:''}<div class="quiz-nav"><button class="btn btn-outline" data-action="quiz-back" ${q.index===0?'disabled':''}>${ICONS.back} Back</button><span class="quiz-shortcut">Enter or → to continue</span><button class="btn btn-primary" data-action="quiz-next" ${item.selected===null?'disabled title="Choose an answer first"':''}>${q.index===q.questions.length-1?'See results':'Next'} ${ICONS.arrow}</button></div></section></div></main>`;
+    <section class="quiz-card"><div class="quiz-label">Choose the correct answer</div>${item.card.scenario?`<div class="quiz-scenario"><strong>Scenario</strong><span>${esc(item.card.scenario)}</span></div>`:''}<div class="quiz-question">${esc(item.card.front)}</div><div class="options">${item.options.map((o,i)=>{const answered=item.selected!==null;const cls=answered?(o===item.card.back?'correct':o===item.selected?'wrong':''):'';return `<button class="option ${cls}" ${answered?'disabled':''} data-option="${i}"><span class="option-letter">${'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[i]}</span><span>${esc(o)}</span></button>`}).join('')}</div>${item.selected!==null?`<div class="answer-feedback ${item.selected===item.card.back?'is-correct':'is-wrong'}">${item.selected===item.card.back?'Correct':'Not quite'}${item.selected===item.card.back?'':` · Correct answer: ${esc(item.card.back)}`}</div>`:''}<div class="quiz-nav"><button class="btn btn-outline" data-action="quiz-back" ${q.index===0?'disabled':''}>${ICONS.back} Back</button><span class="quiz-shortcut">Enter or → to continue</span><button class="btn btn-primary" data-action="quiz-next" ${item.selected===null?'disabled title="Choose an answer first"':''}>${q.index===q.questions.length-1?'See results':'Next'} ${ICONS.arrow}</button></div></section></div></main>`;
 }
 function quizDone(d,q){ const score=q.questions.filter(item=>item.selected===item.card.back).length,pct=Math.round(score/q.questions.length*100); return `<main class="main"><div class="result"><div class="result-ring" style="--score:${pct*3.6}deg"><strong>${pct}%</strong></div><div class="eyebrow">Quiz complete</div><h1>${pct>=80?'Excellent work.':pct>=50?'Good progress.':'Keep practicing.'}</h1><p class="subhead">You got ${score} of ${q.questions.length} correct in ${esc(d.name)}.</p><div class="actions" style="justify-content:center;margin-top:27px"><button class="btn btn-outline" data-quiz="${d.id}">Try again</button><button class="btn btn-primary" data-action="exit-quiz">Back to deck</button></div></div></main>`; }
 
@@ -376,6 +478,16 @@ function bindGlobal(){
   document.querySelectorAll('[data-action]').forEach(b=>b.onclick=()=>action(b.dataset.action));
   document.querySelectorAll('[data-rate]').forEach(b=>b.onclick=()=>rateCard(b.dataset.rate));
   document.querySelectorAll('[data-option]').forEach(b=>b.onclick=()=>{const item=state.quiz.questions[state.quiz.index];item.selected=item.options[+b.dataset.option];render();});
+  document.querySelectorAll('[data-vocab-level]').forEach(b=>b.onclick=()=>{state.vocabulary.level=b.dataset.vocabLevel;render();});
+  document.querySelectorAll('[data-vocab-option]').forEach(b=>b.onclick=()=>answerVocabulary(+b.dataset.vocabOption));
+  document.querySelectorAll('[data-save-vocab-note]').forEach(b=>b.onclick=()=>{
+    const word=vocabularyWords()[+b.dataset.saveVocabNote];
+    if(!word)return;
+    state.data.vocabulary.notes[`${word.level}:${word.word}`]=$(`#vocab-note-${b.dataset.saveVocabNote}`).value.trim();
+    store.save();toast('Your example was saved');
+  });
+  const recallForm=$('#vocab-recall-form');if(recallForm)recallForm.onsubmit=e=>{e.preventDefault();answerVocabulary($('#vocab-recall-input').value);};
+  const vocabMode=$('#vocab-mode'); if(vocabMode)vocabMode.onchange=e=>{state.vocabulary.mode=e.target.value;};
   document.querySelectorAll('[data-edit-card]').forEach(b=>b.onclick=()=>cardModal(b.dataset.editCard));
   document.querySelectorAll('[data-delete-card]').forEach(b=>b.onclick=()=>{const d=state.data.decks.find(x=>x.id===state.deckId);if(confirm('Delete this card?')){d.cards=d.cards.filter(c=>c.id!==b.dataset.deleteCard);store.save();render();}});
   document.querySelectorAll('[data-level]').forEach(b=>b.onclick=()=>{state.explain.source=$('#lecture-source')?.value||state.explain.source;state.explain.level=b.dataset.level;render();});
@@ -432,6 +544,10 @@ async function loadPdfLecture(file){
 }
 function action(a){
   if(a==='new-deck')deckModal(); else if(a==='edit-deck')deckModal(true); else if(a==='new-card')cardModal(); else if(a==='import-cards')importModal(); else if(a==='paste-quiz')quizImportModal();
+  else if(a==='add-vocabulary-word')vocabularyWordModal();
+  else if(a==='start-vocabulary')startVocabulary();
+  else if(a==='vocabulary-next'){const session=state.vocabulary.session;if(session?.questions[session.index]&&session.questions[session.index].selected!==null){session.index++;render();}}
+  else if(a==='exit-vocabulary'){state.vocabulary.session=null;state.view='vocabulary';render();}
   else if(a==='flip'){state.study.flipped=true;render();}
   else if(a==='exit-study'){state.view='deck';state.deckId=state.study.deckId;state.study=null;render();}
   else if(a==='study-again')startStudy(state.study.deckId);
