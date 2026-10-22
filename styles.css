@@ -327,6 +327,8 @@ h2 { font-family: Manrope; font-size: 22px; letter-spacing: -.7px; }
 .vocab-controls > div:nth-child(2) { flex:1 1 190px; }
 .control-label { display:block; margin-bottom:8px; color:var(--muted); font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:.1em; }
 .vocab-tabs { display:flex; gap:8px; }
+.vocab-main-tabs { margin:0 0 18px; }
+.book-words-section { margin-top:52px; padding-top:32px; border-top:1px solid var(--line); }
 .vocab-tab { flex:1; border:1px solid var(--line); border-radius:12px; background:#f7f5ef; padding:8px 12px; text-align:left; font-weight:800; cursor:pointer; }
 .vocab-tab small { display:block; color:var(--muted); font-size:10px; font-weight:600; margin-top:2px; }
 .vocab-tab.active { background:#e7f1e8; border-color:#78a68b; color:var(--green); }
@@ -383,6 +385,14 @@ h2 { font-family: Manrope; font-size: 22px; letter-spacing: -.7px; }
 .book-review-word { font:800 clamp(30px,5vw,45px) Manrope; margin:20px 0; overflow-wrap:anywhere; }
 .book-review-card > p { color:var(--muted); line-height:1.6; max-width:600px; }
 .book-review-actions { display:flex; gap:10px; margin-top:30px; }
+.book-review-answer { margin-top:20px; padding:18px 20px; border:1px solid #bdd3c2; border-radius:14px; background:#edf5ec; }
+.book-review-answer > span { display:block; margin-bottom:6px; color:#315e4c; font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:.08em; }
+.book-review-answer > strong { display:block; font-size:22px; }
+.book-review-answer p { margin:12px 0 0; line-height:1.5; }
+.book-vocab-word .vocab-detail { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.book-vocab-word .vocab-detail .book-status { grid-column:1/-1; justify-self:start; }
+.book-vocab-word .vocab-detail .book-word-definition { grid-column:1/-1; margin:0; }
+.book-vocab-word .vocab-detail .book-row-actions { grid-column:1/-1; padding-top:8px; border-top:1px solid var(--line); background:transparent; }
 
 @media (max-width: 980px) {
   .shell { grid-template-columns:76px 1fr; }
@@ -432,6 +442,8 @@ h2 { font-family: Manrope; font-size: 22px; letter-spacing: -.7px; }
   .vocab-intro { padding:25px; }
   .vocab-intro-stat { display:none; }
   .vocab-grid { grid-template-columns:1fr; }
+  .vocab-main-tabs { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .vocab-main-tabs .vocab-tab { padding:8px; }
   .vocab-word summary { grid-template-columns:105px 1fr auto; }
   .vocab-recall { flex-direction:column; }
   .book-word-row { align-items:flex-start; flex-wrap:wrap; }

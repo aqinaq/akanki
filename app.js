@@ -31,7 +31,7 @@ const cloneDeck = deck => JSON.parse(JSON.stringify(deck));
 
 const store = {
   load(){
-    const fresh=()=>({decks:[...BUILT_IN_QUIZ_DECKS.map(cloneDeck),...STARTER_DECKS.map(cloneDeck)],streak:1,studied:0,history:[0,0,0,0,0,0,0],vocabulary:{custom:[],progress:{},notes:{},bookStatus:{},importedUnits:[]}});
+    const fresh=()=>({decks:[...BUILT_IN_QUIZ_DECKS.map(cloneDeck),...STARTER_DECKS.map(cloneDeck)],streak:1,studied:0,history:[0,0,0,0,0,0,0],vocabulary:{custom:[],progress:{},notes:{},bookStatus:{},importedUnits:[],bookEnrichment:{}}});
     try {
       const saved=JSON.parse(localStorage.getItem('akanki-data'));
       if(!saved)return fresh();
@@ -41,6 +41,7 @@ const store = {
       saved.vocabulary.notes ||= {};
       saved.vocabulary.bookStatus ||= {};
       saved.vocabulary.importedUnits ||= [];
+      saved.vocabulary.bookEnrichment ||= {};
       let changed=false;
       BUILT_IN_QUIZ_DECKS.forEach(deck=>{
         if(!saved.decks.some(existing=>existing.id===deck.id)){saved.decks.unshift(cloneDeck(deck));changed=true;}
@@ -53,7 +54,7 @@ const store = {
   save(){ localStorage.setItem('akanki-data', JSON.stringify(state.data)); }
 };
 
-const state = { data:store.load(), view:'home', deckId:null, search:'', study:null, quiz:null, vocabulary:{level:'A2',mode:'mixed',session:null}, book:{unit:1,search:'',filter:'all',session:null}, explain:{source:'',fileName:'',level:'simple',result:null,status:'',pageCount:0,sourceType:''} };
+const state = { data:store.load(), view:'home', deckId:null, search:'', study:null, quiz:null, vocabulary:{level:'B1',mode:'mixed',session:null}, book:{unit:1,search:'',filter:'all',session:null}, explain:{source:'',fileName:'',level:'simple',result:null,status:'',pageCount:0,sourceType:''} };
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
 const uid = () => Math.random().toString(36).slice(2,10);
@@ -88,7 +89,6 @@ function render(){
   else if(state.view==='explain') content=explainView();
   else if(state.view==='vocabulary') content=vocabularyView();
   else if(state.view==='vocabulary-practice') content=vocabularyPracticeView();
-  else if(state.view==='book-vocabulary') content=bookVocabularyView();
   else if(state.view==='book-review') content=bookReviewView();
   else if(state.view==='decks') content=decksView();
   else if(state.view==='deck') content=deckView();
@@ -96,7 +96,7 @@ function render(){
   else if(state.view==='quiz-select') content=quizSelectView();
   else if(state.view==='quiz') content=quizView();
   else if(state.view==='stats') content=statsView();
-  $('#app').innerHTML = ['study','quiz','vocabulary-practice','book-review'].includes(state.view) ? content : shell(content,state.view==='deck'?'decks':['book-vocabulary','vocabulary'].includes(state.view)?'vocabulary':state.view);
+  $('#app').innerHTML = ['study','quiz','vocabulary-practice','book-review'].includes(state.view) ? content : shell(content,state.view==='deck'?'decks':state.view);
   bindGlobal();
 }
 
@@ -197,7 +197,7 @@ function bookItems(){
     (state.book.filter==='all'||state.data.vocabulary.bookStatus[bookStatusKey(item.term)]===state.book.filter)
   );
 }
-function bookVocabularyView(){
+function bookWordsSection(){
   const units=allBookUnits();
   const items=bookItems(), status=state.data.vocabulary.bookStatus;
   const unique=new Set(units.flatMap(unit=>unit.words.map(bookStatusKey)));
@@ -205,30 +205,45 @@ function bookVocabularyView(){
   const revise=[...unique].filter(key=>status[key]==='revise').length;
   const unit=units.find(item=>item.number===state.book.unit);
   const visible=items.slice(0,150);
-  return `<button class="back-link" data-view="vocabulary">${ICONS.back} Practice sets</button>
-    <section class="page-head"><div><div class="eyebrow">Book vocabulary</div><h1>Words from the book.</h1><p class="subhead">${unique.size} terms and phrases across ${units.length} units. Follow the unit in your copy for meanings and examples.</p></div><div class="actions"><button class="btn btn-outline" data-action="import-vocabulary">Import file</button><a class="btn btn-outline" href="book-vocabulary.csv" download>Download CSV</a><a class="btn btn-outline" href="book-vocabulary.json" download>Download JSON</a></div></section>
-    <div class="book-notice">Index from <em>English Vocabulary in Use: Pre-intermediate and Intermediate</em>, fourth edition, by Stuart Redman. The book covers upper A2 to B1 overall. It does not give each index word a separate level, so these words are organised by unit.</div>
+  return `<section class="book-words-section" aria-label="Book words">
+    <div class="section-head"><div><div class="eyebrow">From your book</div><h2>Book words · ${unique.size} words across ${units.length} units</h2></div><a class="btn btn-outline btn-small" href="book-vocabulary.csv" download>Download CSV</a></div>
+    <div class="book-notice">From <em>English Vocabulary in Use: Pre-intermediate and Intermediate</em> by Stuart Redman. The book gives an overall upper A2–B1 range, not a level for each word. Connections are shown when a reliable one is available.</div>
     <section class="vocab-controls book-controls"><div><span class="control-label">Book unit</span><select id="book-unit" aria-label="Book unit"><option value="0" ${state.book.unit===0?'selected':''}>All ${units.length} units</option>${units.map(item=>`<option value="${item.number}" ${state.book.unit===item.number?'selected':''}>${item.number}. ${esc(item.title)}</option>`).join('')}</select></div><div><span class="control-label">Find a word or phrase</span><input id="book-search" type="search" value="${esc(state.book.search)}" placeholder="Search the selected unit…" /></div><div><span class="control-label">Show</span><select id="book-filter" aria-label="Revision status"><option value="all" ${state.book.filter==='all'?'selected':''}>All words</option><option value="revise" ${state.book.filter==='revise'?'selected':''}>Revise later</option><option value="known" ${state.book.filter==='known'?'selected':''}>Known</option></select></div><button class="btn btn-primary" data-action="start-book-review" ${items.length?'':'disabled'}>Review words ${ICONS.arrow}</button></section>
     <div class="vocab-summary"><span><strong>${known}</strong> known</span><span><strong>${revise}</strong> to revise</span><span><strong>${items.length}</strong> matching entries</span></div>
-    <div class="section-head"><h2>${unit?`Unit ${unit.number}: ${esc(unit.title)}`:'All book units'}</h2><span class="subhead">Use the book for definitions</span></div>
-    ${visible.length?`<div class="book-word-list">${visible.map((item,i)=>`<article class="book-word-row"><div><strong>${esc(item.term)}</strong><small>Unit ${item.unit.number} · ${esc(item.unit.title)}</small></div><span class="book-status ${status[bookStatusKey(item.term)]||''}">${status[bookStatusKey(item.term)]==='known'?'Known':status[bookStatusKey(item.term)]==='revise'?'Revise':'New'}</span><div class="book-row-actions"><button class="btn btn-soft btn-small" data-book-mark="${i}" data-book-status="revise">Revise</button><button class="btn btn-soft btn-small" data-book-mark="${i}" data-book-status="known">Know it</button><button class="btn btn-outline btn-small" data-book-add="${i}">Make tasks</button></div></article>`).join('')}</div>`:`<div class="empty">No words match these filters.</div>`}
-    ${items.length>visible.length?`<p class="book-more">Showing the first ${visible.length} matches. Choose a unit or search to narrow the list.</p>`:''}`;
+    <div class="section-head"><h2>Word bank · ${unit?`Unit ${unit.number}: ${esc(unit.title)}`:'All units'}</h2><span class="subhead">Tap a word to see its connections</span></div>
+    ${visible.length?`<div class="vocab-grid">${visible.map((item,i)=>bookWordCard(item,i,status)).join('')}</div>`:`<div class="empty">No words match these filters.</div>`}
+    ${items.length>visible.length?`<p class="book-more">Showing the first ${visible.length} matches. Choose a unit or search to narrow the list.</p>`:''}</section>`;
+}
+function bookDetail(term){
+  const key=bookStatusKey(term);
+  return {...(window.BOOK_ENRICHMENT?.[key]||{}),...(state.data.vocabulary.bookEnrichment[key]||{})};
+}
+function bookWordCard(item,index,status){
+  const detail=bookDetail(item.term);
+  const stateLabel=status[bookStatusKey(item.term)];
+  const relation=(label,value)=>value?`<div><small>${label}</small><strong>${esc(value)}</strong></div>`:'';
+  return `<details class="vocab-word book-vocab-word"><summary><span class="vocab-word-title">${esc(item.term)}</span><span class="vocab-word-meaning">${esc(detail.meaning||`Unit ${item.unit.number} · ${item.unit.title}`)}</span><span class="vocab-expand">＋</span></summary><div class="vocab-detail"><span class="book-status ${stateLabel||''}">${stateLabel==='known'?'Known':stateLabel==='revise'?'Revise':'New'}</span><p class="book-word-definition">${detail.meaning?esc(detail.meaning):`Look up this word in Unit ${item.unit.number} of your book.`}</p>${relation('Similar',detail.synonym)}${relation('Opposite',detail.opposite)}${relation(detail.familyType==='related'?'Related word':`Word family · ${detail.familyType||'related word'}`,detail.family)}${detail.example?`<p>${esc(detail.example.replace('___',item.term))}</p>`:''}${detail.tip?`<span class="vocab-tip">💡 ${esc(detail.tip)}</span>`:''}<div class="book-row-actions"><button class="btn btn-soft btn-small" data-book-mark="${index}" data-book-status="revise">Revise</button><button class="btn btn-soft btn-small" data-book-mark="${index}" data-book-status="known">Know it</button></div></div></details>`;
 }
 function startBookReview(){
   const items=bookItems();if(!items.length){toast('Choose a unit with words first');return;}
   const pending=items.filter(item=>state.data.vocabulary.bookStatus[bookStatusKey(item.term)]!=='known');
-  const choices=shuffle(pending.length?pending:items).slice(0,15);
-  state.book.session={items:choices,index:0,known:0,revise:0};state.view='book-review';render();
+  const pool=pending.length?pending:items;
+  const enriched=pool.filter(item=>Object.values(bookDetail(item.term)).some(Boolean));
+  const choices=[...shuffle(enriched),...shuffle(pool.filter(item=>!enriched.includes(item)))].slice(0,15);
+  state.book.session={items:choices,index:0,known:0,revise:0,revealed:false};state.view='book-review';render();
 }
 function bookReviewView(){
   const session=state.book.session,item=session.items[session.index];
-  if(!item)return `<main class="main"><div class="result"><div style="font-size:60px">📖</div><div class="eyebrow">Book review complete</div><h1>Keep revising.</h1><p class="subhead">You marked ${session.known} known and ${session.revise} for another look. Your choices are saved in this browser.</p><div class="actions" style="justify-content:center;margin-top:27px"><button class="btn btn-outline" data-action="start-book-review">Review again</button><button class="btn btn-primary" data-action="exit-book-review">Back to book words</button></div></div></main>`;
-  return `<main class="main"><div class="study-shell"><div class="study-top"><button class="icon-btn" data-action="exit-book-review" aria-label="Exit review">${ICONS.close}</button><div class="study-progress"><i style="width:${session.index/session.items.length*100}%"></i></div><div class="study-counter">${session.index+1} / ${session.items.length}</div></div><section class="quiz-card book-review-card"><div class="quiz-label">Unit ${item.unit.number} · ${esc(item.unit.title)}</div><div class="book-review-word">${esc(item.term)}</div><p>Recall the meaning and use this word in your own sentence. Check Unit ${item.unit.number} in your book, then choose how well you knew it.</p><div class="book-review-actions"><button class="btn btn-outline" data-book-rate="revise">Revise later</button><button class="btn btn-primary" data-book-rate="known">I knew it</button></div></section></div></main>`;
+  if(!item)return `<main class="main"><div class="result"><div style="font-size:60px">📖</div><div class="eyebrow">Book review complete</div><h1>Keep revising.</h1><p class="subhead">You marked ${session.known} known and ${session.revise} for another look. Your choices are saved in this browser.</p><div class="actions" style="justify-content:center;margin-top:27px"><button class="btn btn-outline" data-action="start-book-review">Review again</button><button class="btn btn-primary" data-action="exit-book-review">Back to Words</button></div></div></main>`;
+  const detail=bookDetail(item.term);
+  const fields=[['meaning','What does it mean?','Meaning'],['synonym','What is a similar word?','Similar'],['opposite','What is an opposite?','Opposite'],['family','What related word can you recall?','Related word']].filter(([key])=>detail[key]);
+  const task=fields[session.index%fields.length]||null;
+  return `<main class="main"><div class="study-shell"><div class="study-top"><button class="icon-btn" data-action="exit-book-review" aria-label="Exit review">${ICONS.close}</button><div class="study-progress"><i style="width:${session.index/session.items.length*100}%"></i></div><div class="study-counter">${session.index+1} / ${session.items.length}</div></div><section class="quiz-card book-review-card"><div class="quiz-label">Unit ${item.unit.number} · ${esc(item.unit.title)}</div><div class="book-review-word">${esc(item.term)}</div><p>${task?task[1]:`Recall this word and check it in Unit ${item.unit.number}.`}</p>${session.revealed?`<div class="book-review-answer"><span>${task?task[2]:'Book reference'}</span><strong>${esc(task?detail[task[0]]:`Unit ${item.unit.number}: ${item.unit.title}`)}</strong>${Object.entries({meaning:'Meaning',synonym:'Similar',opposite:'Opposite',family:'Related word'}).filter(([key])=>detail[key]&&key!==task?.[0]).map(([key,label])=>`<p><b>${label}:</b> ${esc(detail[key])}</p>`).join('')}${detail.example?`<p><b>Example:</b> ${esc(detail.example.replace('___',item.term))}</p>`:''}${detail.tip?`<p><b>Memory tip:</b> ${esc(detail.tip)}</p>`:''}</div><div class="book-review-actions"><button class="btn btn-outline" data-book-rate="revise">Revise later</button><button class="btn btn-primary" data-book-rate="known">I knew it</button></div>`:`<div class="book-review-actions"><button class="btn btn-primary" data-action="reveal-book-answer">Show answer</button></div>`}</section></div></main>`;
 }
 function rateBookWord(status){
   const session=state.book.session,item=session?.items[session.index];if(!item)return;
   state.data.vocabulary.bookStatus[bookStatusKey(item.term)]=status;
-  session[status]++;session.index++;store.save();render();
+  session[status]++;session.index++;session.revealed=false;store.save();render();
 }
 
 const VOCAB_MODES = {mixed:'Mixed practice',meaning:'Meaning',synonym:'Synonyms',opposite:'Opposites',family:'Word families',context:'In a sentence',recall:'Type the word'};
@@ -243,12 +258,13 @@ function vocabularyWords(level=state.vocabulary.level){
 function vocabularyView(){
   const v=state.vocabulary, words=vocabularyWords(), progress=state.data.vocabulary.progress[v.level]||{attempted:0,correct:0};
   const accuracy=progress.attempted?Math.round(progress.correct/progress.attempted*100):0;
-  return `<section class="page-head"><div><div class="eyebrow">Vocabulary lab</div><h1>Make words stick.</h1><p class="subhead">Explore a level, then test meanings, connections and usage.</p></div><div class="actions"><button class="btn btn-outline" data-view="book-vocabulary">Browse book words</button><button class="btn btn-outline" data-action="import-vocabulary">Import file</button><button class="btn btn-outline" data-action="add-vocabulary-word">${ICONS.plus} Add a word</button></div></section>
+  return `<section class="page-head"><div><div class="eyebrow">Vocabulary lab</div><h1>Make words stick.</h1><p class="subhead">Explore a level, then test meanings, connections and usage.</p></div><div class="actions"><button class="btn btn-outline" data-action="import-vocabulary">Import file</button><button class="btn btn-outline" data-action="add-vocabulary-word">${ICONS.plus} Add a word</button></div></section>
     <section class="vocab-intro"><div><span class="vocab-kicker">Your word path</span><h2>Learn a word from more than one angle.</h2><p>Notice its meaning, a close word, an opposite and a related noun. Then use it in a sentence.</p></div><div class="vocab-intro-stat"><strong>${progress.correct}</strong><span>correct answers<br>at this level</span></div></section>
-    <section class="vocab-controls"><div><span class="control-label">Choose a level</span><div class="vocab-tabs" role="group" aria-label="Vocabulary level">${['A2','B1'].map(level=>`<button class="vocab-tab ${v.level===level?'active':''}" data-vocab-level="${level}" aria-pressed="${v.level===level}">${level}<small>${level==='A2'?'Pre-intermediate':'Intermediate'}</small></button>`).join('')}</div></div><div><span class="control-label">Practice type</span><select id="vocab-mode" aria-label="Practice type">${Object.entries(VOCAB_MODES).map(([key,label])=>`<option value="${key}" ${v.mode===key?'selected':''}>${label}</option>`).join('')}</select></div><button class="btn btn-primary" data-action="start-vocabulary">Start practice ${ICONS.arrow}</button></section>
+    <div class="vocab-tabs vocab-main-tabs" role="group" aria-label="Vocabulary collection">${['A2','B1'].map(level=>`<button class="vocab-tab ${v.level===level?'active':''}" data-vocab-level="${level}" aria-pressed="${v.level===level}">${level}<small>${level==='A2'?'Pre-intermediate set':'Intermediate set'}</small></button>`).join('')}</div>
+    <section class="vocab-controls"><div><span class="control-label">Practice type</span><select id="vocab-mode" aria-label="Practice type">${Object.entries(VOCAB_MODES).map(([key,label])=>`<option value="${key}" ${v.mode===key?'selected':''}>${label}</option>`).join('')}</select></div><button class="btn btn-primary" data-action="start-vocabulary">Start practice ${ICONS.arrow}</button></section>
     <div class="vocab-summary"><span><strong>${words.length}</strong> words in ${v.level}</span><span><strong>${accuracy}%</strong> answer accuracy</span><span>Progress stays in this browser</span></div>
     <div class="section-head"><h2>Word bank</h2><span class="subhead">Tap a word to see its connections</span></div>
-    <div class="vocab-grid">${words.map((word,i)=>`<details class="vocab-word"><summary><span class="vocab-word-title">${esc(word.word)}</span><span class="vocab-word-meaning">${esc(word.meaning)}</span><span class="vocab-expand">＋</span></summary><div class="vocab-detail"><div><small>Similar</small><strong>${esc(word.synonym)}</strong></div><div><small>Opposite</small><strong>${esc(word.opposite)}</strong></div><div><small>Word family · ${esc(word.familyType||'noun')}</small><strong>${esc(word.family)}</strong></div><p>${esc(word.example.replace('___',word.word))}</p><span class="vocab-tip">💡 ${esc(word.tip)}</span><div class="vocab-own-example"><label for="vocab-note-${i}">Your own example</label><textarea id="vocab-note-${i}" maxlength="240" placeholder="Write a sentence about your life using this word…">${esc(state.data.vocabulary.notes[`${v.level}:${word.word}`]||'')}</textarea><button class="btn btn-soft btn-small" data-save-vocab-note="${i}">Save example</button></div></div></details>`).join('')}</div>`;
+    <div class="vocab-grid">${words.map((word,i)=>`<details class="vocab-word"><summary><span class="vocab-word-title">${esc(word.word)}</span><span class="vocab-word-meaning">${esc(word.meaning)}</span><span class="vocab-expand">＋</span></summary><div class="vocab-detail"><div><small>Similar</small><strong>${esc(word.synonym)}</strong></div><div><small>Opposite</small><strong>${esc(word.opposite)}</strong></div><div><small>Word family · ${esc(word.familyType||'noun')}</small><strong>${esc(word.family)}</strong></div><p>${esc(word.example.replace('___',word.word))}</p><span class="vocab-tip">💡 ${esc(word.tip)}</span><div class="vocab-own-example"><label for="vocab-note-${i}">Your own example</label><textarea id="vocab-note-${i}" maxlength="240" placeholder="Write a sentence about your life using this word…">${esc(state.data.vocabulary.notes[`${v.level}:${word.word}`]||'')}</textarea><button class="btn btn-soft btn-small" data-save-vocab-note="${i}">Save example</button></div></div></details>`).join('')}</div>${bookWordsSection()}`;
 }
 function makeVocabularyQuestion(word,mode,words){
   const field=mode==='meaning'?'meaning':['context','recall'].includes(mode)?'word':mode;
@@ -315,7 +331,7 @@ function parseVocabularyImport(contents,fileName){
   })).filter(unit=>unit.words.length)});
   if(/\.json$/i.test(fileName)){
     const data=JSON.parse(clean);
-    if(Array.isArray(data?.units))return book(data.units);
+    if(Array.isArray(data?.units))return {...book(data.units),enrichment:data.enrichment||{}};
     const rows=Array.isArray(data)?data:Array.isArray(data?.words)?data.words:null;
     if(!rows)throw new Error('Use a JSON word array or a book file with units');
     if(rows.some(row=>row&&typeof row==='object'&&row.meaning))return practice(rows);
@@ -332,6 +348,7 @@ function parseVocabularyImport(contents,fileName){
   const termColumn=index('word_or_phrase')>=0?'word_or_phrase':index('term')>=0?'term':index('word')>=0?'word':null;
   if(!termColumn)throw new Error('CSV needs word_or_phrase or word, or full practice columns');
   const grouped=new Map();
+  const enrichment={};
   for(const row of rows){
     const term=cell(row,termColumn);if(!term)continue;
     const number=Number(cell(row,'unit'))||0;
@@ -339,11 +356,13 @@ function parseVocabularyImport(contents,fileName){
     const key=`${number}:${title}`;
     if(!grouped.has(key))grouped.set(key,{number,title,words:[]});
     grouped.get(key).words.push(term);
+    const detail={meaning:cell(row,'meaning_or_clue')||cell(row,'meaning'),synonym:cell(row,'synonym'),opposite:cell(row,'opposite'),family:cell(row,'related_word')||cell(row,'family'),familyType:cell(row,'related_word_type')||cell(row,'familyType'),example:cell(row,'example'),tip:cell(row,'memory_tip')||cell(row,'tip')};
+    if(Object.values(detail).some(Boolean))enrichment[bookStatusKey(term)]=Object.fromEntries(Object.entries(detail).filter(([,value])=>value));
   }
-  return book([...grouped.values()]);
+  return {...book([...grouped.values()]),enrichment};
 }
 function applyVocabularyImport(imported){
-  const vocab=state.data.vocabulary, before={custom:[...vocab.custom],importedUnits:JSON.parse(JSON.stringify(vocab.importedUnits))};
+  const vocab=state.data.vocabulary, before={custom:[...vocab.custom],importedUnits:JSON.parse(JSON.stringify(vocab.importedUnits)),bookEnrichment:JSON.parse(JSON.stringify(vocab.bookEnrichment))};
   let added=0;
   if(imported.kind==='practice'){
     const existing=new Set([...window.VOCABULARY_WORDS,...vocab.custom].map(word=>`${word.level}:${word.word.toLocaleLowerCase()}`));
@@ -361,14 +380,25 @@ function applyVocabularyImport(imported){
       for(const term of source.words){const key=bookStatusKey(term);if(existing.has(key))continue;saved.words.push(term);existing.add(key);added++;}
       if(!saved.words.length)vocab.importedUnits=vocab.importedUnits.filter(unit=>unit!==saved);
     }
+    for(const [rawKey,detail] of Object.entries(imported.enrichment||{})){
+      const key=bookStatusKey(rawKey);
+      if(!key||['__proto__','constructor','prototype'].includes(key))continue;
+      if(!detail||typeof detail!=='object')continue;
+      const previous={...(window.BOOK_ENRICHMENT?.[key]||{}),...(vocab.bookEnrichment[key]||{})};
+      const clean=Object.fromEntries(['meaning','synonym','opposite','family','familyType','example','tip'].map(field=>[field,String(detail[field]||'').trim()]).filter(([,value])=>value));
+      if(!Object.keys(clean).length)continue;
+      if(Object.entries(clean).some(([field,value])=>previous[field]!==value)){
+        vocab.bookEnrichment[key]={...(vocab.bookEnrichment[key]||{}),...clean};added++;
+      }
+    }
   }
   try{if(added)store.save();}
-  catch{vocab.custom=before.custom;vocab.importedUnits=before.importedUnits;throw new Error('Browser storage is full; try a smaller file');}
+  catch{vocab.custom=before.custom;vocab.importedUnits=before.importedUnits;vocab.bookEnrichment=before.bookEnrichment;throw new Error('Browser storage is full; try a smaller file');}
   return added;
 }
 function vocabularyImportModal(){
   let parsed=null;
-  modal('Import vocabulary file',`<p class="subhead" style="margin-bottom:18px">Choose a CSV or JSON file. A book index file adds words to the unit browser. A practice file with level, word, meaning, synonym, opposite, family and example adds automatic tasks.</p><div class="field"><label for="vocab-import-file">Vocabulary file</label><input id="vocab-import-file" type="file" accept=".csv,.json,text/csv,application/json" required /><span id="vocab-import-status" class="field-note">Files stay in this browser. Reimporting existing words will skip duplicates.</span></div><details class="format-help"><summary>See CSV formats</summary><div class="format-examples"><div><strong>Book words</strong><pre>unit,unit_title,word_or_phrase&#10;7,Weather,fog</pre></div><div><strong>Practice tasks</strong><pre>level,word,meaning,synonym,opposite,family,example,tip&#10;A2,protect,to keep safe,defend,endanger,protection,A helmet can ___ your head.,Think of protection</pre></div></div></details>`,()=>{
+  modal('Import vocabulary file',`<p class="subhead" style="margin-bottom:18px">Choose a CSV or JSON file. Book words and any supplied meanings or connections appear directly in the Words page. A practice file with level, word, meaning, synonym, opposite, family and example adds automatic tasks.</p><div class="field"><label for="vocab-import-file">Vocabulary file</label><input id="vocab-import-file" type="file" accept=".csv,.json,text/csv,application/json" required /><span id="vocab-import-status" class="field-note">Files stay in this browser. Reimporting existing words will skip duplicates.</span></div><details class="format-help"><summary>See CSV formats</summary><div class="format-examples"><div><strong>Book words</strong><pre>unit,unit_title,word_or_phrase,meaning_or_clue,synonym,opposite,related_word&#10;7,Weather,fog,thick cloud near the ground,mist,,foggy</pre></div><div><strong>Practice tasks</strong><pre>level,word,meaning,synonym,opposite,family,example,tip&#10;A2,protect,to keep safe,defend,endanger,protection,A helmet can ___ your head.,Think of protection</pre></div></div></details>`,()=>{
     if(!parsed){toast('Choose a valid vocabulary file first');return;}
     try{
       const added=applyVocabularyImport(parsed);
@@ -708,7 +738,8 @@ function action(a){
   else if(a==='import-vocabulary')vocabularyImportModal();
   else if(a==='add-vocabulary-word')vocabularyWordModal();
   else if(a==='start-book-review')startBookReview();
-  else if(a==='exit-book-review'){state.book.session=null;state.view='book-vocabulary';render();}
+  else if(a==='reveal-book-answer'){state.book.session.revealed=true;render();}
+  else if(a==='exit-book-review'){state.book.session=null;state.view='vocabulary';render();}
   else if(a==='start-vocabulary')startVocabulary();
   else if(a==='vocabulary-next'){const session=state.vocabulary.session;if(session?.questions[session.index]&&session.questions[session.index].selected!==null){session.index++;render();}}
   else if(a==='exit-vocabulary'){state.vocabulary.session=null;state.view='vocabulary';render();}
